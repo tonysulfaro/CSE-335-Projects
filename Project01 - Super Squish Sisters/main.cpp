@@ -14,6 +14,13 @@
 #include <cstdlib>
 #include "Game.h"
 
+#include "Character.h"
+#include "Small.h"
+#include "Medium.h"
+#include <iostream>
+
+using namespace std;
+
 /*
  * 
  */
@@ -31,6 +38,14 @@ int main(int argc, char** argv)
     game.getCharactersByHair();
     
     game.getCharacters();
+    
+    Character c = Character("character1", 239.99, "13", 4, "nord");
+    Small s = Small("small 1", 23.5,"44",6,"sanic",true);
+    Medium m = Medium("med1",65.33333,"33",6,"chub","shaft");
+    
+    c.print();
+    s.print();
+    m.print();
     
     return 0;
 }

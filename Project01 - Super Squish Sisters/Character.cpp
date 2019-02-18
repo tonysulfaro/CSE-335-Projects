@@ -13,6 +13,10 @@
 
 #include "Character.h"
 
+#include <iostream>
+
+using namespace std;
+
 Character::Character(string name, double weight, string speed, int hair_length, string race) {
     m_name = name;
     m_weight = weight;
@@ -27,3 +31,6 @@ Character::Character(const Character& orig) {
 Character::~Character() {
 }
 
+void Character::print(){
+    cout << m_name << m_weight << m_speed << m_hair_length << m_race << endl;
+}
