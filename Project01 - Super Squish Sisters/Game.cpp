@@ -41,7 +41,7 @@ void Game::ceateSisters(){
 
 // print out all sisters
 void Game::printSisters(){
-    cout << "************************************************ Printing Sisters ************************************************" << endl;
+    cout << "**************************** Printing Sisters ********************************************************************" << endl;
     for(int i = 0; i < m_sisters.size(); ++i){
         m_sisters[i].print();
     }
@@ -62,7 +62,7 @@ void Game::getCharacters(){
 
 // get by race
 void Game::getCharactersByRace(){
-    cout << "**************************************** Printing Sisters: Order by Race *****************************************" << endl;
+    cout << "******************** Printing Sisters: Order by Race *************************************************************" << endl;
     
     vector<Character> byRace;
     vector<Character> temp;
@@ -94,7 +94,7 @@ void Game::getCharactersByRace(){
 
 // get by speed
 void Game::getCharactersBySpeed(){
-    cout << "**************************************** Printing Sisters: Order by Speed ****************************************" << endl;
+    cout << "******************** Printing Sisters: Order by Speed ************************************************************" << endl;
     
     vector<Character> bySpeed;
     
@@ -129,7 +129,7 @@ void Game::getCharactersBySpeed(){
 
 // get by hair
 void Game::getCharactersByHair(){
-    cout << "**************************************** Printing Sisters: Order by Hair *****************************************" << endl;
+    cout << "********************* Printing Sisters: Order by Hair *************************************************************" << endl;
     vector<Character> byHair;
     
     vector<Character> temp;
