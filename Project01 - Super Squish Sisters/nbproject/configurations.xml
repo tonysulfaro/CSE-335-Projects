@@ -24,7 +24,6 @@
       <itemPath>Big.cpp</itemPath>
       <itemPath>BigCreate.cpp</itemPath>
       <itemPath>Character.cpp</itemPath>
-      <itemPath>CharacterFactory.cpp</itemPath>
       <itemPath>Game.cpp</itemPath>
       <itemPath>Medium.cpp</itemPath>
       <itemPath>MediumCreate.cpp</itemPath>
@@ -65,8 +64,6 @@
       <item path="Character.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Character.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CharacterFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CharacterFactory.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -124,8 +121,6 @@
       <item path="Character.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Character.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CharacterFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CharacterFactory.h" ex="false" tool="3" flavor2="0">
       </item>

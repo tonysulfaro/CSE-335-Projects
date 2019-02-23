@@ -14,13 +14,22 @@
 #ifndef MEDIUMCREATE_H
 #define MEDIUMCREATE_H
 
-class MediumCreate {
+#include "CharacterFactory.h"
+#include "Medium.h"
+
+class MediumCreate : public CharacterFactory{
+protected:
+    string melee_weapon = "sword";
 public:
     MediumCreate();
     MediumCreate(const MediumCreate& orig);
     virtual ~MediumCreate();
-private:
-
+    
+//    virtual Medium SetAttributes(){
+//        return Medium("bai", 0.0, "fast", 2, "human", "sword");
+//    }
+    
+    virtual void SetAttributes(string, vector<Character>*) const=0;
 };
 
 #endif /* MEDIUMCREATE_H */
