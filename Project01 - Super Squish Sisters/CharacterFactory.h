@@ -33,7 +33,7 @@ public:
 //    virtual ~CharacterFactory();
     
     virtual void SetAttributes(string, vector<Character>*) const=0;
-    
+    void SetInformation(string);
 };
 
 #endif /* CHARACTERFACTORY_H */

@@ -28,7 +28,6 @@ public:
 //    virtual Medium SetAttributes(){
 //        return Medium("bai", 0.0, "fast", 2, "human", "sword");
 //    }
-    
     virtual void SetAttributes(string, vector<Character>*) const=0;
 };
 
