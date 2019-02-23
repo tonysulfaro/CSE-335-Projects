@@ -33,5 +33,5 @@ Character::~Character() {
 }
 
 void Character::print(){
-    cout << m_name << m_weight << m_speed << m_hair_length << m_race << endl;
+    cout << m_name << " " << m_weight <<" " <<  m_speed <<" " <<  m_hair_length <<" " <<  m_race << endl;
 }

@@ -35,11 +35,13 @@ public:
     void ceateSisters();
     void printSisters();
     void sort();
+    
+    void addSister(Character character);
 
-    vector<Character> getCharacters();
-    vector<Character> getCharactersByRace();
-    vector<Character> getCharactersBySpeed();
-    vector<Character> getCharactersByHair();
+    void getCharacters();
+    void getCharactersByRace();
+    void getCharactersBySpeed();
+    void getCharactersByHair();
     
 };
 

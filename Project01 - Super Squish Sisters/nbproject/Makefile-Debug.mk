@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=MinGW-Windows
-CND_DLIB_EXT=dll
+CND_PLATFORM=GNU-MacOSX
+CND_DLIB_EXT=dylib
 CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -64,9 +64,9 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/project01_-_super_squish_sisters.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/project01_-_super_squish_sisters
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/project01_-_super_squish_sisters.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/project01_-_super_squish_sisters: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/project01_-_super_squish_sisters ${OBJECTFILES} ${LDLIBSOPTIONS}
 

@@ -45,10 +45,23 @@ int main(int argc, char** argv)
     Medium m = Medium("med1",65.33333,"33",6,"chub","shaft");
     Big b = Big("big1",6969.420,"44",6,"chonk","crush");
     
-    c.print();
-    s.print();
-    m.print();
-    b.print();
+//    c.print();
+//    s.print();
+//    m.print();
+//    b.print();
+    
+    game.addSister(c);
+    game.addSister(s);
+    game.addSister(m);
+    game.addSister(b);
+    
+    game.printSisters();
+   
+    game.getCharactersByRace();
+    
+    game.getCharactersBySpeed();
+
+    game.getCharactersByHair();
     
     return 0;
 }
