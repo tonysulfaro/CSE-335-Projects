@@ -14,9 +14,12 @@
 #include "Character.h"
 
 #include <iostream>
+#include <iomanip>
 
 using std::cout;
 using std::endl;
+using std::left;
+using std::setw;
 
 Character::Character(string name, double weight, string speed, int hair_length, string race) {
     m_name = name;
@@ -33,5 +36,12 @@ Character::~Character() {
 }
 
 void Character::print(){
-    cout << m_name << " " << m_weight <<" " <<  m_speed <<" " <<  m_hair_length <<" " <<  m_race << endl;
+    cout << "Name: " << setw(15) << left << m_name  
+            << "Weight: " << setw(10) << left << m_weight 
+            << "Size: " << setw(8) << left << "TEMP"
+            << "Speed: " << setw(5) << left <<  m_speed 
+            << "HairLen: " << setw(5) << left << m_hair_length 
+            << "Race: " << setw(12) << left << m_race
+            << "SPECIAL: " << setw(10) << left << "TEMP"
+            << endl;
 }
