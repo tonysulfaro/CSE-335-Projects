@@ -31,6 +31,9 @@ public:
     virtual ~Character();
     
     void print();
+    int getHair(){return m_hair_length;}
+    string getSpeed(){return m_speed;}
+    string getRace(){return m_race;}
 private:
 
 };
