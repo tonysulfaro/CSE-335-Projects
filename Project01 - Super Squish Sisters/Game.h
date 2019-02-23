@@ -38,7 +38,7 @@ public:
     
     void addSister(Character character);
 
-    vector<Character> getCharacters();
+    void getCharacters();
     void getCharactersByRace();
     void getCharactersBySpeed();
     void getCharactersByHair();

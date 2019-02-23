@@ -54,8 +54,10 @@ void Game::sort(){
 }
 
 // get all characters
-vector<Character> Game::getCharacters(){
-    return m_sisters;
+void Game::getCharacters(){
+    for(auto a: m_sisters){
+        a.print();
+    }
 }
 
 // get by race
