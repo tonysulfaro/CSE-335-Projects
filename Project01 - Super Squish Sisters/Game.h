@@ -20,6 +20,12 @@
 #include <vector>
 #include <string>
 
+
+#include<fstream>
+using std::ifstream;
+#include <sstream>
+using std::istringstream;
+
 // TODO: remove this
 using namespace std;
 
