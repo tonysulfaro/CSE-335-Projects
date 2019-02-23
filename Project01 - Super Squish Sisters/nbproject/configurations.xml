@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Big.h</itemPath>
       <itemPath>Character.h</itemPath>
       <itemPath>Game.h</itemPath>
       <itemPath>Medium.h</itemPath>
@@ -16,6 +17,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Big.cpp</itemPath>
       <itemPath>Character.cpp</itemPath>
       <itemPath>Game.cpp</itemPath>
       <itemPath>Medium.cpp</itemPath>
@@ -44,6 +46,10 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="Big.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Big.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Character.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Character.h" ex="false" tool="3" flavor2="0">
@@ -83,6 +89,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Big.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Big.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Character.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Character.h" ex="false" tool="3" flavor2="0">

@@ -1,4 +1,4 @@
-build/Debug/MinGW-Windows/game.o: Game.cpp Game.h Character.h
+build/Debug/MinGW-Windows/Game.o: Game.cpp Game.h Character.h
 
 Game.h:
 

@@ -17,6 +17,7 @@
 #include "Character.h"
 #include "Small.h"
 #include "Medium.h"
+#include "Big.h"
 #include <iostream>
 
 using namespace std;
@@ -42,10 +43,12 @@ int main(int argc, char** argv)
     Character c = Character("character1", 239.99, "13", 4, "nord");
     Small s = Small("small 1", 23.5,"44",6,"sanic",true);
     Medium m = Medium("med1",65.33333,"33",6,"chub","shaft");
+    Big b = Big("big1",6969.420,"44",6,"chonk","crush");
     
     c.print();
     s.print();
     m.print();
+    b.print();
     
     return 0;
 }

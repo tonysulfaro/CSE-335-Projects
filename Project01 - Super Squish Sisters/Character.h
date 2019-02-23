@@ -27,7 +27,7 @@ protected:
     string m_race;
 public:
     Character(string name, double weight, string speed, int hair_length, string race);
-    Character(const Character& orig);
+    //Character(const Character& orig);
     virtual ~Character();
     
     void print();

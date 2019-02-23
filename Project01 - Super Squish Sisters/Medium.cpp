@@ -15,7 +15,8 @@
 
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::endl;
 
 Medium::Medium(string name, double weight, string speed, int hair_length, string race, string melee_weapon):Character(name,weight,speed,hair_length,race) {
     m_meleeWeapon = melee_weapon;

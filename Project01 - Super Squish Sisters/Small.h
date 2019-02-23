@@ -20,7 +20,7 @@
 
 using std::string;
 
-class Small: Character{
+class Small: public Character{
 public:
     Small(string name, double weight, string speed, int hair_length, string race, bool gun_equipped);
 

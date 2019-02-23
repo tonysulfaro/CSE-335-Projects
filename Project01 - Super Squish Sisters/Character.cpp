@@ -15,7 +15,8 @@
 
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::endl;
 
 Character::Character(string name, double weight, string speed, int hair_length, string race) {
     m_name = name;
@@ -25,8 +26,8 @@ Character::Character(string name, double weight, string speed, int hair_length, 
     m_race = race;
 }
 
-Character::Character(const Character& orig) {
-}
+//Character::Character(const Character& orig) {
+//}
 
 Character::~Character() {
 }
