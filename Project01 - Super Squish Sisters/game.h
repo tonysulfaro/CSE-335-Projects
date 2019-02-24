@@ -31,7 +31,7 @@ using std::string;
 class Game {
 private:
 protected:
-    vector <Character*> m_sisters;
+    vector <Character> m_sisters;
 public:
     Game(string fileName);
     Game(const Game& orig);
