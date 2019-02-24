@@ -30,7 +30,7 @@ public:
     //Character(const Character& orig);
     virtual ~Character();
     
-    void print();
+    virtual void print() const = 0;
     int getHair(){return m_hair_length;}
     string getSpeed(){return m_speed;}
     string getRace(){return m_race;}

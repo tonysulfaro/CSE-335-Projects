@@ -35,13 +35,13 @@ Character::Character(string name, double weight, string speed, int hair_length, 
 Character::~Character() {
 }
 
-void Character::print(){
-    cout << "Name: " << setw(15) << left << m_name  
-            << "Weight: " << setw(10) << left << m_weight 
-            << "Size: " << setw(8) << left << "TEMP"
-            << "Speed: " << setw(5) << left <<  m_speed 
-            << "HairLen: " << setw(5) << left << m_hair_length 
-            << "Race: " << setw(12) << left << m_race
-            << "SPECIAL: " << setw(10) << left << "TEMP"
-            << endl;
-}
+//void Character::print(){
+//    cout << "Name: " << setw(15) << left << m_name  
+//            << "Weight: " << setw(10) << left << m_weight 
+//            << "Size: " << setw(8) << left << "TEMP"
+//            << "Speed: " << setw(5) << left <<  m_speed 
+//            << "HairLen: " << setw(5) << left << m_hair_length 
+//            << "Race: " << setw(12) << left << m_race
+//            << "SPECIAL: " << setw(10) << left << "TEMP"
+//            << endl;
+//}

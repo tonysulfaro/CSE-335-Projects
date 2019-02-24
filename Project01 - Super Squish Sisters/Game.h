@@ -26,7 +26,7 @@ using namespace std;
 class Game {
 private:
 protected:
-    vector <Character> m_sisters;
+    vector <Character*> m_sisters;
 public:
     Game(string fileName);
     Game(const Game& orig);
@@ -36,12 +36,12 @@ public:
     void printSisters();
     void sort();
     
-    void addSister(Character character);
+    void addSister(Character &character);
 
-    void getCharacters();
-    void getCharactersByRace();
-    void getCharactersBySpeed();
-    void getCharactersByHair();
+//    void getCharacters();
+//    void getCharactersByRace();
+//    void getCharactersBySpeed();
+//    void getCharactersByHair();
     
 };
 

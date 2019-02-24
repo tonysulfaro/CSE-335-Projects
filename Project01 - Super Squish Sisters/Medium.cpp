@@ -14,9 +14,12 @@
 #include "Medium.h"
 
 #include <iostream>
+#include <iomanip>
 
 using std::cout;
 using std::endl;
+using std::left;
+using std::setw;
 
 Medium::Medium(string name, double weight, string speed, int hair_length, string race, string melee_weapon):Character(name,weight,speed,hair_length,race) {
     m_meleeWeapon = melee_weapon;
@@ -28,6 +31,13 @@ Medium::Medium(string name, double weight, string speed, int hair_length, string
 Medium::~Medium() {
 }
 
-void Medium::print(){
-    cout << m_name << m_weight << m_speed << m_hair_length << m_race << m_meleeWeapon << endl;
+void Medium::print() const{
+    cout << "Name: " << setw(15) << left << m_name  
+            << "Weight: " << setw(10) << left << m_weight 
+            << "Size: " << setw(8) << left << m_size
+            << "Speed: " << setw(5) << left <<  m_speed 
+            << "HairLen: " << setw(5) << left << m_hair_length 
+            << "Race: " << setw(12) << left << m_race
+            << "Weapon: " << setw(10) << left << m_meleeWeapon
+            << endl;
 }
