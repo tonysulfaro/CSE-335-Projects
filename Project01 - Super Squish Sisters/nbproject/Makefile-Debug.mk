@@ -74,52 +74,52 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/project01_-_super_squish_sisters.exe:
 ${OBJECTDIR}/Big.o: Big.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Big.o Big.cpp
+	$(COMPILE.cc) -g -Ibuild -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Big.o Big.cpp
 
 ${OBJECTDIR}/BigCreate.o: BigCreate.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BigCreate.o BigCreate.cpp
+	$(COMPILE.cc) -g -Ibuild -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BigCreate.o BigCreate.cpp
 
 ${OBJECTDIR}/Character.o: Character.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Character.o Character.cpp
+	$(COMPILE.cc) -g -Ibuild -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Character.o Character.cpp
 
 ${OBJECTDIR}/CharacterFactory.o: CharacterFactory.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CharacterFactory.o CharacterFactory.cpp
+	$(COMPILE.cc) -g -Ibuild -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CharacterFactory.o CharacterFactory.cpp
 
 ${OBJECTDIR}/Game.o: Game.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game.o Game.cpp
+	$(COMPILE.cc) -g -Ibuild -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game.o Game.cpp
 
 ${OBJECTDIR}/Medium.o: Medium.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Medium.o Medium.cpp
+	$(COMPILE.cc) -g -Ibuild -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Medium.o Medium.cpp
 
 ${OBJECTDIR}/MediumCreate.o: MediumCreate.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MediumCreate.o MediumCreate.cpp
+	$(COMPILE.cc) -g -Ibuild -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MediumCreate.o MediumCreate.cpp
 
 ${OBJECTDIR}/Small.o: Small.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Small.o Small.cpp
+	$(COMPILE.cc) -g -Ibuild -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Small.o Small.cpp
 
 ${OBJECTDIR}/SmallCreate.o: SmallCreate.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SmallCreate.o SmallCreate.cpp
+	$(COMPILE.cc) -g -Ibuild -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SmallCreate.o SmallCreate.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -Ibuild -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:

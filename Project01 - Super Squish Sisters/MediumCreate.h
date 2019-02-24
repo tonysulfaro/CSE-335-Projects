@@ -17,18 +17,13 @@
 #include "CharacterFactory.h"
 #include "Medium.h"
 
+
 class MediumCreate : public CharacterFactory{
-protected:
-    string melee_weapon = "sword";
 public:
-    MediumCreate(string , vector<Character>*);
-    MediumCreate(const MediumCreate& orig);
-    virtual ~MediumCreate();
-    
-//    virtual Medium SetAttributes(){
-//        return Medium("bai", 0.0, "fast", 2, "human", "sword");
-//    }
-    void SetAttributes(string, vector<Character>*) const=0;
+    MediumCreate(string s, vector<Character>* c);
+//    MediumCreate(const MediumCreate& orig);
+//    virtual ~MediumCreate();
+    void SetAttributes(string line, vector<Character>* characters) const;
 };
 
 #endif /* MEDIUMCREATE_H */

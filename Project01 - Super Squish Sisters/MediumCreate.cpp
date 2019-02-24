@@ -14,19 +14,21 @@
 #include "MediumCreate.h"
 
 MediumCreate::MediumCreate(string s, vector<Character>* v) {
-    SetInformation(s);
-    string temp;
-    istringstream iss (s);
-    iss >> temp >> temp >> temp >> temp >> temp >> temp >> melee_weapon;
     MediumCreate::SetAttributes(s, v);
 }
 
-MediumCreate::MediumCreate(const MediumCreate& orig) {
-}
+//MediumCreate::MediumCreate(const MediumCreate& orig) {
+//}
+//
+//MediumCreate::~MediumCreate() {
+//}
 
-MediumCreate::~MediumCreate() {
-}
+void MediumCreate::SetAttributes(string line, vector<Character>* characters) const{
+    string name, toss_size, weight, speed, hair_length, race, melee_weapon;
 
-void MediumCreate::SetAttributes(string values, vector<Character>* store) const{
-    store->push_back(Medium(name,weight,speed,hair_length,race,melee_weapon));
+    istringstream iss (line);
+    iss >> name >> toss_size >> weight >> speed >> hair_length >> race >> melee_weapon;
+//    cout << name << " | " << std::stod(weight)<< " | " << speed<< " | "<<std::stoi(hair_length)<< " | "<<race<< " | "<<melee_weapon<<endl;
+//    cout << "**********" << endl;
+    characters->push_back(Medium(name, std::stod(weight), speed, std::stoi(hair_length), race, melee_weapon));
 }

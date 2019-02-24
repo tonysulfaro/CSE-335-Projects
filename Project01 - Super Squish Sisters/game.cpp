@@ -32,20 +32,19 @@ Game::Game(string fileName) {
     string line;
     string skip;
     string size;
+
     while(getline(inFile,line)){
         istringstream iss (line);
         iss >> skip >> size;
-        cout << size << endl;
         
         if (size == "small"){
-            SmallCreate(line);
+            SmallCreate(line, &m_sisters);
         }
         else if (size == "med"){
-//            MediumCreate(line, m_sisters);
-//            MediumCreate::SetAttributes(line, &m_sisters);
+            MediumCreate(line, &m_sisters);
         }
         else if(size == "big"){
-            BigCreate(line);
+            BigCreate(line, &m_sisters);
         }
     }
 }

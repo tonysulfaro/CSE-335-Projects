@@ -13,17 +13,11 @@
 
 #include "CharacterFactory.h"
 
-//CharacterFactory::CharacterFactory() {
-//}
-//
-//CharacterFactory::CharacterFactory(const CharacterFactory& orig) {
-//}
-//
-//CharacterFactory::~CharacterFactory() {
-//}
+CharacterFactory::CharacterFactory() {
+}
 
-void CharacterFactory::SetInformation(string line){
-    string toss_size;
-    istringstream iss (line);
-    iss >> name >> toss_size >> weight >> speed >> hair_length >> race;
+CharacterFactory::CharacterFactory(const CharacterFactory& orig) {
+}
+
+CharacterFactory::~CharacterFactory() {
 }
