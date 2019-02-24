@@ -16,24 +16,20 @@
 
 #include "Game.h"
 
-#include <string>
-using std::string;
-
+#include <iostream>
+using std::cout;
+using std::endl;
 
 class CharacterFactory {
-protected:
-    string name = "bai";
-    double weight = 1.0;
-    string speed = "fast";
-    int hair_length = 3;
-    string race = "human";
-public:
-//    CharacterFactory();
-//    CharacterFactory(const CharacterFactory& orig);
-//    virtual ~CharacterFactory();
+public:   
+    CharacterFactory();
+    CharacterFactory(const CharacterFactory& orig);
+    virtual ~CharacterFactory();
     
-    virtual void SetAttributes(string, vector<Character>*) const=0;
-    void SetInformation(string);
+    
+    virtual void SetAttributes(string line, vector<Character>* characters) const=0;
+//    virtual void SetVaringVar(string line, vector<Character>* characters) const=0;
+//    void SetAttributes(string line);
 };
 
 #endif /* CHARACTERFACTORY_H */

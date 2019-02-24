@@ -14,13 +14,15 @@
 #ifndef SMALLCREATE_H
 #define SMALLCREATE_H
 
-class SmallCreate {
-public:
-    SmallCreate();
-    SmallCreate(const SmallCreate& orig);
-    virtual ~SmallCreate();
-private:
+#include "CharacterFactory.h"
+#include "Small.h"
 
+class SmallCreate : public CharacterFactory{
+public:
+    SmallCreate(string s, vector<Character>* c);
+//    SmallCreate(const SmallCreate& orig);
+//    virtual ~SmallCreate();
+    void SetAttributes(string line, vector<Character>* characters) const;
 };
 
 #endif /* SMALLCREATE_H */

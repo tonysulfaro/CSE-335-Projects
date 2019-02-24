@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   MediumCreate.cpp
  * Author: baile
- * 
+ *
  * Created on February 23, 2019, 1:54 PM
  */
 
@@ -21,11 +21,14 @@ MediumCreate::MediumCreate(string s, vector<Character*>* v) {
     MediumCreate::SetAttributes(s, v);
 }
 
-MediumCreate::MediumCreate(const MediumCreate& orig) {
-}
+//MediumCreate::MediumCreate(const MediumCreate& orig) {
+//}
+//
+//MediumCreate::~MediumCreate() {
+//}
 
-MediumCreate::~MediumCreate() {
-}
+void MediumCreate::SetAttributes(string line, vector<Character>* characters) const{
+    string name, toss_size, weight, speed, hair_length, race, melee_weapon;
 
 void MediumCreate::SetAttributes(string values, vector<Character*>* store) const{
     Medium m(name,weight,speed,hair_length,race,melee_weapon);

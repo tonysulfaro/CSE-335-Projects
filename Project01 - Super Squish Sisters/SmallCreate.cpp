@@ -13,12 +13,25 @@
 
 #include "SmallCreate.h"
 
-SmallCreate::SmallCreate() {
+SmallCreate::SmallCreate(string s, vector<Character>* v) {
+    SmallCreate::SetAttributes(s, v);
 }
 
-SmallCreate::SmallCreate(const SmallCreate& orig) {
-}
+//SmallCreate::SmallCreate(const SmallCreate& orig) {
+//}
+//
+//SmallCreate::~SmallCreate() {
+//}
 
-SmallCreate::~SmallCreate() {
-}
+void SmallCreate::SetAttributes(string line, vector<Character>* characters) const{
+    string name, toss_size, weight, speed, hair_length, race, gun_equipped;
 
+    istringstream iss (line);
+    iss >> name >> toss_size >> weight >> speed >> hair_length >> race >> gun_equipped;
+//    cout << name << " | " << std::stod(weight)<< " | " << speed<< " | "<<std::stoi(hair_length)<< " | "<<race<< " | "<<gun_equipped<<endl;
+//    cout << "**********" << endl;
+    
+    bool bool_val = (gun_equipped == "TRUE") ? true : false; 
+    
+    characters->push_back(Small(name, std::stod(weight), speed, std::stoi(hair_length), race, bool_val));
+}

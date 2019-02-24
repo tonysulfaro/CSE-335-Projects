@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   MediumCreate.h
  * Author: baile
  *
@@ -17,14 +17,13 @@
 #include "CharacterFactory.h"
 #include "Medium.h"
 
+
 class MediumCreate : public CharacterFactory{
-protected:
-    string melee_weapon = "sword";
 public:
     MediumCreate(string , vector<Character*>*);
-    MediumCreate(const MediumCreate& orig);
-    virtual ~MediumCreate();
-    
+    // MediumCreate(const MediumCreate& orig);
+    // virtual ~MediumCreate();
+
 //    virtual Medium SetAttributes(){
 //        return Medium("bai", 0.0, "fast", 2, "human", "sword");
 //    }
@@ -32,4 +31,3 @@ public:
 };
 
 #endif /* MEDIUMCREATE_H */
-
