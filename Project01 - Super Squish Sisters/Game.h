@@ -38,9 +38,9 @@ public:
     void addSister(Character &character);
 
     void getCharacters();
-//    void getCharactersByRace();
-//    void getCharactersBySpeed();
-//    void getCharactersByHair();
+    void getCharactersByRace();
+    void getCharactersBySpeed();
+    void getCharactersByHair();
     
 };
 

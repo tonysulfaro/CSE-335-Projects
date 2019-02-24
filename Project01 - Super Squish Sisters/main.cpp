@@ -41,8 +41,8 @@ int main(int argc, char** argv)
 //    game.getCharacters();
     
     Small s("small 1", 23.5,"44",6,"sanic",true);
-    Medium m("med1",65.33333,"33",6,"chub","shaft");
-    Big b("big1",6969.420,"44",6,"chonk","crush");
+    Medium m("med1",65.33333,"33",66,"chub","shaft");
+    Big b("big1",6969.420,"44",62,"chonk","crush");
     
 //    c.print();
 //    s.print();
@@ -56,11 +56,11 @@ int main(int argc, char** argv)
     
     game.getCharacters();
    
-//    game.getCharactersByRace();
-//    
-//    game.getCharactersBySpeed();
-//
-//    game.getCharactersByHair();
+    game.getCharactersByRace();
+    
+    game.getCharactersBySpeed();
+
+    game.getCharactersByHair();
     
     return 0;
 }
