@@ -30,5 +30,12 @@ void BigCreate::SetAttributes(string line, vector<Character*>* characters) const
     iss >> name >> toss_size >> weight >> speed >> hair_length >> race >> skill;
 //    cout << name << " | " << std::stod(weight)<< " | " << speed<< " | "<<std::stoi(hair_length)<< " | "<<race<< " | "<<skill<<endl;
 //    cout << "**********" << endl;
+    
+    Big * b = new Big(name, std::stod(weight), speed, std::stoi(hair_length), race, skill);
+    characters->push_back(b);
+    
+//    Big b = Big(name, std::stod(weight), speed, std::stoi(hair_length), race, skill);
+//    characters->push_back(&b);
+    
 //    characters->push_back(Big(name, std::stod(weight), speed, std::stoi(hair_length), race, skill));
 }
