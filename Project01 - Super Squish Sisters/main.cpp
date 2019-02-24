@@ -26,18 +26,10 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) 
-<<<<<<< HEAD
 {
-
     Game game = Game("sisters.txt");
 
-=======
-{   
-    
-    Game game = Game("sisters.txt");
-    
->>>>>>> dev
-//    game.getCharacters();
+    game.getCharacters();
 //    
 //    game.getCharactersByRace();
 //    
@@ -57,17 +49,6 @@ int main(int argc, char** argv)
 //    b.print();
     
     //game.addSister(c);
-<<<<<<< HEAD
-=======
-    game.addSister(s);
-    game.addSister(m);
-    game.addSister(b);
-    
-    game.getCharacters();
-   
-    game.getCharactersByRace();
-    
-    game.getCharactersBySpeed();
 
 //    game.getCharacters();
 //    
@@ -84,13 +65,13 @@ int main(int argc, char** argv)
 //    Medium m = Medium("med1",65.33333,"33",6,"chub","shaft");
 //    Big b = Big("big1",6969.420,"44",6,"chonk","crush");
 //    
-////    c.print();
-////    s.print();
-////    m.print();
-////    b.print();
+//    c.print();
+//    s.print();
+//    m.print();
+//    b.print();
 //    
 //    game.addSister(c);
->>>>>>> dev
+
 //    game.addSister(s);
 //    game.addSister(m);
 //    game.addSister(b);
