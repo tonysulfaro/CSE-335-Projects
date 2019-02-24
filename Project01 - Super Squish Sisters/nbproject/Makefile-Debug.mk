@@ -35,7 +35,15 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/game.o \
+	${OBJECTDIR}/Big.o \
+	${OBJECTDIR}/BigCreate.o \
+	${OBJECTDIR}/Character.o \
+	${OBJECTDIR}/CharacterFactory.o \
+	${OBJECTDIR}/Game.o \
+	${OBJECTDIR}/Medium.o \
+	${OBJECTDIR}/MediumCreate.o \
+	${OBJECTDIR}/Small.o \
+	${OBJECTDIR}/SmallCreate.o \
 	${OBJECTDIR}/main.o
 
 
@@ -63,10 +71,50 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/project01_-_super_squish_sisters.exe:
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/project01_-_super_squish_sisters ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/game.o: game.cpp
+${OBJECTDIR}/Big.o: Big.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/game.o game.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Big.o Big.cpp
+
+${OBJECTDIR}/BigCreate.o: BigCreate.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BigCreate.o BigCreate.cpp
+
+${OBJECTDIR}/Character.o: Character.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Character.o Character.cpp
+
+${OBJECTDIR}/CharacterFactory.o: CharacterFactory.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CharacterFactory.o CharacterFactory.cpp
+
+${OBJECTDIR}/Game.o: Game.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game.o Game.cpp
+
+${OBJECTDIR}/Medium.o: Medium.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Medium.o Medium.cpp
+
+${OBJECTDIR}/MediumCreate.o: MediumCreate.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MediumCreate.o MediumCreate.cpp
+
+${OBJECTDIR}/Small.o: Small.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Small.o Small.cpp
+
+${OBJECTDIR}/SmallCreate.o: SmallCreate.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SmallCreate.o SmallCreate.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
