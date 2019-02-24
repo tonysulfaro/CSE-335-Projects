@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   MediumCreate.h
  * Author: baile
  *
@@ -27,4 +27,3 @@ public:
 };
 
 #endif /* MEDIUMCREATE_H */
-
