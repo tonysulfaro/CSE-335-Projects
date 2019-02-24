@@ -27,7 +27,7 @@ public:
     virtual ~CharacterFactory();
     
     
-    virtual void SetAttributes(string line, vector<Character>* characters) const=0;
+    virtual void SetAttributes(string line, vector<Character*>* characters) const=0;
 //    virtual void SetVaringVar(string line, vector<Character>* characters) const=0;
 //    void SetAttributes(string line);
 };
