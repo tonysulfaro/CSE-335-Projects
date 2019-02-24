@@ -29,17 +29,7 @@ int main(int argc, char** argv)
 {
 
     Game game = Game("sisters.txt");
-<<<<<<< HEAD
 
-    game.getCharacters();
-    
-    game.getCharactersByRace();
-    
-    game.getCharactersBySpeed();
-
-    game.getCharactersByHair();
-=======
-    
 //    game.getCharacters();
 //    
 //    game.getCharactersByRace();
@@ -49,11 +39,10 @@ int main(int argc, char** argv)
 //    game.getCharactersByHair();
 //    
 //    game.getCharacters();
->>>>>>> tony
-    
-    Small s("small 1", 23.5,"44",6,"sanic",true);
-    Medium m("med1",65.33333,"33",66,"chub","shaft");
-    Big b("big1",6969.420,"44",62,"chonk","crush");
+
+//    Small s("small 1", 23.5,"44",6,"sanic",true);
+//    Medium m("med1",65.33333,"33",66,"chub","shaft");
+//    Big b("big1",6969.420,"44",62,"chonk","crush");
     
 //    c.print();
 //    s.print();
@@ -61,17 +50,17 @@ int main(int argc, char** argv)
 //    b.print();
     
     //game.addSister(c);
-    game.addSister(s);
-    game.addSister(m);
-    game.addSister(b);
-    
-    game.getCharacters();
-   
-    game.getCharactersByRace();
-    
-    game.getCharactersBySpeed();
-
-    game.getCharactersByHair();
+//    game.addSister(s);
+//    game.addSister(m);
+//    game.addSister(b);
+//    
+//    game.getCharacters();
+//   
+//    game.getCharactersByRace();
+//    
+//    game.getCharactersBySpeed();
+//
+//    game.getCharactersByHair();
     
     return 0;
 }
