@@ -40,7 +40,7 @@ void Game::ceateSisters(){
 }
 
 // print out all sisters
-void Game::printSisters(){
+void Game::getCharacters(){
     cout << "**************************** Printing Sisters ********************************************************************" << endl;
     for(int i = 0; i < m_sisters.size(); ++i){
         m_sisters[i]->print();
@@ -53,13 +53,6 @@ void Game::sort(){
 
 }
 
-//// get all characters
-//void Game::getCharacters(){
-//    for(auto a: m_sisters){
-//        a.print();
-//    }
-//}
-//
 //// get by race
 //void Game::getCharactersByRace(){
 //    cout << "******************** Printing Sisters: Order by Race *************************************************************" << endl;

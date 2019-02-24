@@ -33,12 +33,11 @@ public:
     virtual ~Game();
     
     void ceateSisters();
-    void printSisters();
     void sort();
     
     void addSister(Character &character);
 
-//    void getCharacters();
+    void getCharacters();
 //    void getCharactersByRace();
 //    void getCharactersBySpeed();
 //    void getCharactersByHair();

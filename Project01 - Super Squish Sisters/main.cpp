@@ -54,7 +54,7 @@ int main(int argc, char** argv)
     game.addSister(m);
     game.addSister(b);
     
-    game.printSisters();
+    game.getCharacters();
    
 //    game.getCharactersByRace();
 //    
