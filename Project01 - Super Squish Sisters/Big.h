@@ -28,9 +28,10 @@ public:
     
     void setSpecialSkill(string skill);
     string getSpecialSkill();
-    void print();
+    void print() const;
 private:
     string m_special_skill;
+    const string m_size = "big";
 };
 
 #endif /* BIG_H */

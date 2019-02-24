@@ -15,8 +15,12 @@
 #include "Small.h"
 
 #include <iostream>
+#include <iomanip>
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::left;
+using std::setw;
 
 Small::Small(string name, double weight, string speed, int hair_length, string race, bool gun_equipped):Character(name,weight,speed,hair_length,race){
     m_gunEquipped = gun_equipped;
@@ -25,8 +29,15 @@ Small::Small(string name, double weight, string speed, int hair_length, string r
 Small::~Small() {
 }
 
-void Small::print(){
-    cout << m_name << m_weight << m_speed << m_hair_length << m_race << m_gunEquipped << endl;
+void Small::print() const{
+    cout << "Name: " << setw(15) << left << m_name  
+            << "Weight: " << setw(10) << left << m_weight 
+            << "Size: " << setw(8) << left << m_size
+            << "Speed: " << setw(5) << left <<  m_speed 
+            << "HairLen: " << setw(5) << left << m_hair_length 
+            << "Race: " << setw(12) << left << m_race
+            << "IsEquipped: " << setw(10) << left << m_gunEquipped
+            << endl;
 }
 
 void Small::equipGun(){

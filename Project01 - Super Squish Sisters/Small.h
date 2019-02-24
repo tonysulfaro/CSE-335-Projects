@@ -26,11 +26,11 @@ public:
 
     virtual ~Small();
     
-    void print();
+    void print() const;
     void equipGun();
     void unEquipGun();
 private:
-    string m_size = "small";
+    const string m_size = "small";
     bool m_gunEquipped = false;
     
 };

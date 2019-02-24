@@ -61,10 +61,10 @@ void Game::ceateSisters(){
 }
 
 // print out all sisters
-void Game::printSisters(){
+void Game::getCharacters(){
     cout << "**************************** Printing Sisters ********************************************************************" << endl;
     for(int i = 0; i < m_sisters.size(); ++i){
-        m_sisters[i].print();
+        m_sisters[i]->print();
     }
     cout << "******************************************************************************************************************" << endl;
 }
@@ -74,40 +74,34 @@ void Game::sort(){
 
 }
 
-// get all characters
-void Game::getCharacters(){
-    for(auto a: m_sisters){
-        a.print();
-    }
-}
-
 // get by race
 void Game::getCharactersByRace(){
     cout << "******************** Printing Sisters: Order by Race *************************************************************" << endl;
     
-    vector<Character> byRace;
-    vector<Character> temp;
+    vector<Character*> byRace;
+    vector<Character*> temp;
     
     std::copy(std::begin(m_sisters), std::end(m_sisters),std::back_inserter(temp));
     
     while(temp.size() > 0){
         
-        Character min_sister = temp[0];
+        Character *min_sister = temp[0];
         int index = 0;
         for(int i = 1; i < temp.size(); ++i){
-            Character sister = temp[i];
-            if (sister.getRace() < min_sister.getRace()){
+            Character *sister = temp[i];
+            if (sister->getRace() < min_sister->getRace()){
                 min_sister = sister;
                 index = i;
             }
 
         }
         byRace.push_back(temp[index]);
+        min_sister->print();
         
         temp.erase(temp.begin() + index);
     }
-    for(auto a: byRace){
-        a.print();
+    for(int i = 0; i < temp.size(); ++i){
+        temp[i]->print();
     }
     cout << "******************************************************************************************************************" << endl;
     //return byRace;
@@ -117,31 +111,30 @@ void Game::getCharactersByRace(){
 void Game::getCharactersBySpeed(){
     cout << "******************** Printing Sisters: Order by Speed ************************************************************" << endl;
     
-    vector<Character> bySpeed;
-    
-    vector<Character> temp;
+    vector<Character*> bySpeed;
+    vector<Character*> temp;
     
     std::copy(std::begin(m_sisters), std::end(m_sisters),std::back_inserter(temp));
     
     while(temp.size() > 0){
         
-        Character min_sister = temp[0];
+        Character *min_sister = temp[0];
         int index = 0;
         for(int i = 1; i < temp.size(); ++i){
-            Character sister = temp[i];
-            if (sister.getSpeed() < min_sister.getSpeed()){
+            Character *sister = temp[i];
+            if (sister->getSpeed() < min_sister->getSpeed()){
                 min_sister = sister;
                 index = i;
             }
 
         }
         bySpeed.push_back(temp[index]);
+        min_sister->print();
         
         temp.erase(temp.begin() + index);
     }
-    
-    for(auto a: bySpeed){
-        a.print();
+    for(int i = 0; i < temp.size(); ++i){
+        temp[i]->print();
     }
     
     cout << "******************************************************************************************************************" << endl;
@@ -151,36 +144,36 @@ void Game::getCharactersBySpeed(){
 // get by hair
 void Game::getCharactersByHair(){
     cout << "********************* Printing Sisters: Order by Hair *************************************************************" << endl;
-    vector<Character> byHair;
-    
-    vector<Character> temp;
+    vector<Character*> byHair;
+    vector<Character*> temp;
     
     std::copy(std::begin(m_sisters), std::end(m_sisters),std::back_inserter(temp));
     
     while(temp.size() > 0){
         
-        Character min_sister = temp[0];
+        Character *min_sister = temp[0];
         int index = 0;
         for(int i = 1; i < temp.size(); ++i){
-            Character sister = temp[i];
-            if (sister.getHair() < min_sister.getHair()){
+            Character *sister = temp[i];
+            if (sister->getHair() < min_sister->getHair()){
                 min_sister = sister;
                 index = i;
             }
 
         }
         byHair.push_back(temp[index]);
+        min_sister->print();
         
         temp.erase(temp.begin() + index);
     }
-    for(auto a: byHair){
-        a.print();
+    for(int i = 0; i < temp.size(); ++i){
+        temp[i]->print();
     }
     cout << "******************************************************************************************************************" << endl;
     //return byHair;
 }
 
 
-void Game::addSister(Character character){
-    m_sisters.push_back(character);
+void Game::addSister(Character &character){
+    m_sisters.push_back(&character);
 }
