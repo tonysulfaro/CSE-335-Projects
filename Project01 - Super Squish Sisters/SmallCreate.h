@@ -19,10 +19,10 @@
 
 class SmallCreate : public CharacterFactory{
 public:
-    SmallCreate(string s, vector<Character*>* c);
+    SmallCreate(string s, vector<Character>* c);
 //    SmallCreate(const SmallCreate& orig);
 //    virtual ~SmallCreate();
-    void SetAttributes(string line, vector<Character*>* characters) const;
+    void SetAttributes(string line, vector<Character>* characters) const;
 };
 
 #endif /* SMALLCREATE_H */

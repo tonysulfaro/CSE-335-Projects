@@ -20,10 +20,10 @@
 
 class MediumCreate : public CharacterFactory{
 public:
-    MediumCreate(string s, vector<Character*>* c);
+    MediumCreate(string s, vector<Character>* c);
 //    MediumCreate(const MediumCreate& orig);
 //    virtual ~MediumCreate();
-    void SetAttributes(string line, vector<Character*>* characters) const;
+    void SetAttributes(string line, vector<Character>* characters) const;
 };
 
 #endif /* MEDIUMCREATE_H */

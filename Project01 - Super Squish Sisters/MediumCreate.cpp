@@ -13,7 +13,7 @@
 
 #include "MediumCreate.h"
 
-MediumCreate::MediumCreate(string s, vector<Character*>* v) {
+MediumCreate::MediumCreate(string s, vector<Character>* v) {
     MediumCreate::SetAttributes(s, v);
 }
 
@@ -23,7 +23,7 @@ MediumCreate::MediumCreate(string s, vector<Character*>* v) {
 //MediumCreate::~MediumCreate() {
 //}
 
-void MediumCreate::SetAttributes(string line, vector<Character*>* characters) const{
+void MediumCreate::SetAttributes(string line, vector<Character>* characters) const{
     string name, toss_size, weight, speed, hair_length, race, melee_weapon;
 
     istringstream iss (line);
@@ -34,8 +34,8 @@ void MediumCreate::SetAttributes(string line, vector<Character*>* characters) co
 //    Medium * m = new Medium(name, std::stod(weight), speed, std::stoi(hair_length), race, melee_weapon);
 //    characters->push_back(m);
     
-    Medium m(name, std::stod(weight), speed, std::stoi(hair_length), race, melee_weapon);
-    characters->push_back(&m);
+//    Medium m(name, std::stod(weight), speed, std::stoi(hair_length), race, melee_weapon);
+//    characters->push_back(&m);
     
 //    cout << characters->size() << endl;
 

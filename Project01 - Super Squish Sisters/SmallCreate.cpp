@@ -23,7 +23,7 @@ SmallCreate::SmallCreate(string s, vector<Character*>* v) {
 //SmallCreate::~SmallCreate() {
 //}
 
-void SmallCreate::SetAttributes(string line, vector<Character*>* characters) const{
+void SmallCreate::SetAttributes(string line, vector<Character>* characters) const{
     string name, toss_size, weight, speed, hair_length, race, gun_equipped;
 
     istringstream iss (line);
@@ -33,10 +33,8 @@ void SmallCreate::SetAttributes(string line, vector<Character*>* characters) con
     
     bool bool_val = (gun_equipped == "TRUE") ? true : false; 
     
-    
-    
-    Small * s = new Small(name, std::stod(weight), speed, std::stoi(hair_length), race, bool_val);
-    characters->push_back(s);
+//    Small * s = new Small(name, std::stod(weight), speed, std::stoi(hair_length), race, bool_val);
+//    characters->push_back(s);
     
 //    Small s = Small(name, std::stod(weight), speed, std::stoi(hair_length), race, bool_val);
 //    characters->push_back(&s);

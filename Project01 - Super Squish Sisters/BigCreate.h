@@ -19,10 +19,10 @@
 
 class BigCreate : public CharacterFactory{
 public:
-    BigCreate(string s, vector<Character*>* c);
+    BigCreate(string s, vector<Character>* c);
 //    BigCreate(const BigCreate& orig);
 //    virtual ~BigCreate();
-    void SetAttributes(string line, vector<Character*>* characters) const;
+    void SetAttributes(string line, vector<Character>* characters) const;
 };
 
 #endif /* BIGCREATE_H */

@@ -13,7 +13,7 @@
 
 #include "BigCreate.h"
 
-BigCreate::BigCreate(string s, vector<Character*>* v) {
+BigCreate::BigCreate(string s, vector<Character>* v) {
     BigCreate::SetAttributes(s, v);
 }
 
@@ -23,7 +23,7 @@ BigCreate::BigCreate(string s, vector<Character*>* v) {
 //BigCreate::~BigCreate() {
 //}
 
-void BigCreate::SetAttributes(string line, vector<Character*>* characters) const{
+void BigCreate::SetAttributes(string line, vector<Character>* characters) const{
     string name, toss_size, weight, speed, hair_length, race, skill;
 
     istringstream iss (line);
@@ -31,8 +31,8 @@ void BigCreate::SetAttributes(string line, vector<Character*>* characters) const
 //    cout << name << " | " << std::stod(weight)<< " | " << speed<< " | "<<std::stoi(hair_length)<< " | "<<race<< " | "<<skill<<endl;
 //    cout << "**********" << endl;
     
-    Big * b = new Big(name, std::stod(weight), speed, std::stoi(hair_length), race, skill);
-    characters->push_back(b);
+//    Big * b = new Big(name, std::stod(weight), speed, std::stoi(hair_length), race, skill);
+//    characters->push_back(b);
     
 //    Big b = Big(name, std::stod(weight), speed, std::stoi(hair_length), race, skill);
 //    characters->push_back(&b);
