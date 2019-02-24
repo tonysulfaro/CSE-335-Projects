@@ -26,6 +26,4 @@ void CharacterFactory::SetInformation(string line){
     string toss_size;
     istringstream iss (line);
     iss >> name >> toss_size >> weight >> speed >> hair_length >> race;
-    cout << name << endl;
-    
 }

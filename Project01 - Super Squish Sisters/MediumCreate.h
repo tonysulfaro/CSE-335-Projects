@@ -21,14 +21,14 @@ class MediumCreate : public CharacterFactory{
 protected:
     string melee_weapon = "sword";
 public:
-    MediumCreate();
+    MediumCreate(string , vector<Character>*);
     MediumCreate(const MediumCreate& orig);
     virtual ~MediumCreate();
     
 //    virtual Medium SetAttributes(){
 //        return Medium("bai", 0.0, "fast", 2, "human", "sword");
 //    }
-    virtual void SetAttributes(string, vector<Character>*) const=0;
+    void SetAttributes(string, vector<Character>*) const=0;
 };
 
 #endif /* MEDIUMCREATE_H */

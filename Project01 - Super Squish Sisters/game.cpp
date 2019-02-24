@@ -13,6 +13,9 @@
 
 #include "Game.h"
 #include "Character.h"
+#include "SmallCreate.h"
+#include "MediumCreate.h"
+#include "BigCreate.h"
 
 #include <iostream>
 #include <vector>
@@ -25,7 +28,26 @@ using namespace std;
 
 Game::Game(string fileName) {
     // read in data
-    cout << fileName << endl;
+    ifstream inFile(fileName);
+    string line;
+    string skip;
+    string size;
+    while(getline(inFile,line)){
+        istringstream iss (line);
+        iss >> skip >> size;
+        cout << size << endl;
+        
+        if (size == "small"){
+            SmallCreate(line);
+        }
+        else if (size == "med"){
+            MediumCreate(line, m_sisters);
+//            MediumCreate::SetAttributes(line, &m_sisters);
+        }
+        else if(size == "big"){
+            BigCreate(line);
+        }
+    }
 }
 
 Game::Game(const Game& orig) {

@@ -25,9 +25,8 @@
 using std::ifstream;
 #include <sstream>
 using std::istringstream;
-
-// TODO: remove this
-using namespace std;
+using std::vector;
+using std::string;
 
 class Game {
 private:
