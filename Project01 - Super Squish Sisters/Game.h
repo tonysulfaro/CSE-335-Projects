@@ -20,8 +20,13 @@
 #include <vector>
 #include <string>
 
-// TODO: remove this
-using namespace std;
+
+#include<fstream>
+using std::ifstream;
+#include <sstream>
+using std::istringstream;
+using std::vector;
+using std::string;
 
 class Game {
 private:

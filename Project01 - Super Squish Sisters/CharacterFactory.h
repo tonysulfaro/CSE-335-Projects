@@ -14,7 +14,7 @@
 #ifndef CHARACTERFACTORY_H
 #define CHARACTERFACTORY_H
 
-#include "game.h"
+#include "Game.h"
 
 #include <string>
 using std::string;
@@ -33,6 +33,7 @@ public:
 //    virtual ~CharacterFactory();
     
     virtual void SetAttributes(string, vector<Character>*) const=0;
+    void SetInformation(string);
 };
 
 #endif /* CHARACTERFACTORY_H */

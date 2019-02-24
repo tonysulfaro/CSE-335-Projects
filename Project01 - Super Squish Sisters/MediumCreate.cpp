@@ -13,7 +13,12 @@
 
 #include "MediumCreate.h"
 
-MediumCreate::MediumCreate() {
+MediumCreate::MediumCreate(string s, vector<Character>* v) {
+    SetInformation(s);
+    string temp;
+    istringstream iss (s);
+    iss >> temp >> temp >> temp >> temp >> temp >> temp >> melee_weapon;
+    MediumCreate::SetAttributes(s, v);
 }
 
 MediumCreate::MediumCreate(const MediumCreate& orig) {
@@ -22,10 +27,6 @@ MediumCreate::MediumCreate(const MediumCreate& orig) {
 MediumCreate::~MediumCreate() {
 }
 
-//Medium MediumCreate::SetAttributes() const {
-//    return Medium("bai", 0.0, "fast", 2, "human", "sword");
-//}
-
 void MediumCreate::SetAttributes(string values, vector<Character>* store) const{
-    
+    store->push_back(Medium(name,weight,speed,hair_length,race,melee_weapon));
 }

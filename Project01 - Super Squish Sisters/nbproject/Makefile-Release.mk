@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Big.o \
 	${OBJECTDIR}/BigCreate.o \
 	${OBJECTDIR}/Character.o \
+	${OBJECTDIR}/CharacterFactory.o \
 	${OBJECTDIR}/Game.o \
 	${OBJECTDIR}/Medium.o \
 	${OBJECTDIR}/MediumCreate.o \
@@ -84,6 +85,11 @@ ${OBJECTDIR}/Character.o: Character.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Character.o Character.cpp
+
+${OBJECTDIR}/CharacterFactory.o: CharacterFactory.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CharacterFactory.o CharacterFactory.cpp
 
 ${OBJECTDIR}/Game.o: Game.cpp
 	${MKDIR} -p ${OBJECTDIR}
