@@ -11,7 +11,7 @@
  * Created on February 10, 2019, 6:26 PM
  */
 
-#include "Game.h"
+Game
 #include "Character.h"
 #include "SmallCreate.h"
 #include "MediumCreate.h"

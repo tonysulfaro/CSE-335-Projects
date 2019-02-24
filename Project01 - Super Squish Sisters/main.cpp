@@ -12,7 +12,7 @@
  */
 
 #include <cstdlib>
-#include "Game.h"
+Game
 
 #include "Character.h"
 #include "Small.h"
