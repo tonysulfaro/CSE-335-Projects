@@ -12,7 +12,7 @@
  */
 
 #include <cstdlib>
-Game
+#include "Game.h"
 
 #include "Character.h"
 #include "Small.h"
@@ -26,10 +26,10 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) 
-{   
-    
+{
+
     Game game = Game("sisters.txt");
-    
+
 //    game.getCharacters();
 //    
 //    game.getCharactersByRace();

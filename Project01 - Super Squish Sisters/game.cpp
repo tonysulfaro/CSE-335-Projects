@@ -41,7 +41,7 @@ Game::Game(string fileName) {
             SmallCreate(line);
         }
         else if (size == "med"){
-            MediumCreate(line, m_sisters);
+//            MediumCreate(line, m_sisters);
 //            MediumCreate::SetAttributes(line, &m_sisters);
         }
         else if(size == "big"){

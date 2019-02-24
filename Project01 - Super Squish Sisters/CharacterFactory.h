@@ -14,7 +14,7 @@
 #ifndef CHARACTERFACTORY_H
 #define CHARACTERFACTORY_H
 
-Game
+#include "Game.h"
 
 #include <string>
 using std::string;
