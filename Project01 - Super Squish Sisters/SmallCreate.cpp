@@ -35,7 +35,7 @@ void SmallCreate::SetAttributes(string line, vector<Character*>* characters) con
     
     
     
-    Small * s = new Small(name, std::stod(weight), speed, std::stoi(hair_length), race, bool_val);
+    Small * s = new Small(name, std::stod(weight), speed, std::stod(hair_length), race, bool_val);
     characters->push_back(s);
     
 //    Small s = Small(name, std::stod(weight), speed, std::stoi(hair_length), race, bool_val);

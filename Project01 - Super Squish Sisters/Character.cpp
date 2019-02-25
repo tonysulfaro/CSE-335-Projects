@@ -21,7 +21,7 @@ using std::endl;
 using std::left;
 using std::setw;
 
-Character::Character(string name, double weight, string speed, int hair_length, string race) {
+Character::Character(string name, double weight, string speed, double hair_length, string race) {
     m_name = name;
     m_weight = weight;
     m_speed = speed;

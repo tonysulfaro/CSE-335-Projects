@@ -22,7 +22,7 @@ using std::string;
 
 class Medium: public Character {
 public:
-    Medium(string name, double weight, string speed, int hair_length, string race, string melee_weapon);
+    Medium(string name, double weight, string speed, double hair_length, string race, string melee_weapon);
     //Medium(const Medium& orig);
     virtual ~Medium();
     

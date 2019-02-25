@@ -31,7 +31,7 @@ void MediumCreate::SetAttributes(string line, vector<Character*>* characters) co
 //    cout << name << " | " << std::stod(weight)<< " | " << speed<< " | "<<std::stoi(hair_length)<< " | "<<race<< " | "<<melee_weapon<<endl;
 //    cout << "**********" << endl;
 
-    Medium * m = new Medium(name, std::stod(weight), speed, std::stoi(hair_length), race, melee_weapon);
+    Medium * m = new Medium(name, std::stod(weight), speed, std::stod(hair_length), race, melee_weapon);
     characters->push_back(m);
     
 //    Medium m(name, std::stod(weight), speed, std::stoi(hair_length), race, melee_weapon);

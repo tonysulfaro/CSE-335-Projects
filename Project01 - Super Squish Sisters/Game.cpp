@@ -163,7 +163,7 @@ void Game::getCharactersByHair(){
         int index = 0;
         for(int i = 1; i < temp.size(); ++i){
             Character *sister = temp[i];
-            if (sister->getHair() < min_sister->getHair()){
+            if (sister->getHair() <= min_sister->getHair()){
                 min_sister = sister;
                 index = i;
             }

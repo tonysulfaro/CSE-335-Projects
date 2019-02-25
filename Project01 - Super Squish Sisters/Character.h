@@ -23,10 +23,10 @@ protected:
     string m_name;
     double m_weight;
     string m_speed;
-    int m_hair_length;
+    double m_hair_length;
     string m_race;
 public:
-    Character(string name, double weight, string speed, int hair_length, string race);
+    Character(string name, double weight, string speed, double hair_length, string race);
     //Character(const Character& orig);
     virtual ~Character();
     

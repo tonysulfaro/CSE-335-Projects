@@ -21,7 +21,7 @@ using std::endl;
 using std::left;
 using std::setw;
 
-Big::Big(string name, double weight, string speed, int hair_length, string race, string skill):Character(name,weight,speed,hair_length,race) {
+Big::Big(string name, double weight, string speed, double hair_length, string race, string skill):Character(name,weight,speed,hair_length,race) {
     m_special_skill = skill;
 }
 

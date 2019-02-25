@@ -22,7 +22,7 @@ using std::endl;
 using std::left;
 using std::setw;
 
-Small::Small(string name, double weight, string speed, int hair_length, string race, bool gun_equipped):Character(name,weight,speed,hair_length,race){
+Small::Small(string name, double weight, string speed, double hair_length, string race, bool gun_equipped):Character(name,weight,speed,hair_length,race){
     m_gunEquipped = gun_equipped;
 }
 

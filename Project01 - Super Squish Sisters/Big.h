@@ -22,7 +22,7 @@ using std::string;
 
 class Big: public Character {
 public:
-    Big(string name, double weight, string speed, int hair_length, string race, string skill);
+    Big(string name, double weight, string speed, double hair_length, string race, string skill);
     Big(const Big& orig);
     virtual ~Big();
     
