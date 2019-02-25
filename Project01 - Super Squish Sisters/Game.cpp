@@ -47,6 +47,30 @@ Game::Game(string fileName) {
             BigCreate(line, &m_sisters);
         }
     }
+    
+    // sort data just in case input file is not sorted by name
+    vector<Character*> byName;
+    vector<Character*> temp;
+    
+    std::copy(std::begin(m_sisters), std::end(m_sisters),std::back_inserter(temp));
+    
+    while(temp.size() > 0){
+        
+        Character *min_sister = temp[0];
+        int index = 0;
+        for(int i = 1; i < temp.size(); ++i){
+            Character *sister = temp[i];
+            if (sister->getName() <= min_sister->getName()){
+                min_sister = sister;
+                index = i;
+            }
+
+        }
+        byName.push_back(temp[index]);
+        temp.erase(temp.begin() + index);
+    }
+    m_sisters.clear();
+    std::copy(std::begin(byName), std::end(byName),std::back_inserter(m_sisters));
 }
 
 Game::Game(const Game& orig) {
@@ -63,6 +87,7 @@ void Game::ceateSisters(){
 // print out all sisters
 void Game::getCharacters(){
     cout << "**************************** Printing Sisters ********************************************************************" << endl;
+    // print all characters
     for(int i = 0; i < m_sisters.size(); ++i){
         m_sisters[i]->print();
     }
@@ -85,7 +110,7 @@ void Game::sort(){
 // get by race
 void Game::getCharactersByRace(){
     cout << "******************** Printing Sisters: Order by Race *************************************************************" << endl<<endl;
-    
+    // sort by race
     vector<Character*> byRace;
     vector<Character*> temp;
     
@@ -95,13 +120,13 @@ void Game::getCharactersByRace(){
         
         Character *min_sister = temp[0];
         int index = 0;
+        // find min element in remaining 
         for(int i = 1; i < temp.size(); ++i){
             Character *sister = temp[i];
             if (sister->getRace() < min_sister->getRace()){
                 min_sister = sister;
                 index = i;
             }
-
         }
         byRace.push_back(temp[index]);
         min_sister->print();
@@ -118,7 +143,7 @@ void Game::getCharactersByRace(){
 // get by speed
 void Game::getCharactersBySpeed(){
     cout << "******************** Printing Sisters: Order by Speed ************************************************************" << endl;
-    
+    // sort by speed
     vector<Character*> bySpeed;
     vector<Character*> temp;
     
@@ -128,13 +153,13 @@ void Game::getCharactersBySpeed(){
         
         Character *min_sister = temp[0];
         int index = 0;
+        // find min element in remaining 
         for(int i = 1; i < temp.size(); ++i){
             Character *sister = temp[i];
-            if ( std::stoi(sister->getSpeed()) < std::stoi(min_sister->getSpeed())){
+            if ( std::stoi(sister->getSpeed()) <= std::stoi(min_sister->getSpeed())){
                 min_sister = sister;
                 index = i;
             }
-
         }
         bySpeed.push_back(temp[index]);
         min_sister->print();
@@ -152,6 +177,7 @@ void Game::getCharactersBySpeed(){
 // get by hair
 void Game::getCharactersByHair(){
     cout << "********************* Printing Sisters: Order by Hair *************************************************************" << endl;
+    // sort by hair
     vector<Character*> byHair;
     vector<Character*> temp;
     
@@ -161,13 +187,13 @@ void Game::getCharactersByHair(){
         
         Character *min_sister = temp[0];
         int index = 0;
+        // find min element in remaining 
         for(int i = 1; i < temp.size(); ++i){
             Character *sister = temp[i];
             if (sister->getHair() <= min_sister->getHair()){
                 min_sister = sister;
                 index = i;
             }
-
         }
         byHair.push_back(temp[index]);
         min_sister->print();

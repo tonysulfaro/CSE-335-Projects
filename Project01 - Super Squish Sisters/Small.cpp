@@ -30,11 +30,11 @@ Small::~Small() {
 }
 
 void Small::print() const{
-    cout << "Name: " << setw(15) << left << m_name  
-            << "Weight: " << setw(10) << left << m_weight 
+    cout << "Name: " << setw(15) << left << m_name
             << "Size: " << setw(8) << left << m_size
+            << "Weight: " << setw(10) << left << m_weight 
             << "Speed: " << setw(5) << left <<  m_speed 
-            << "HairLen: " << setw(5) << left << m_hair_length 
+            << "HairLen: " << setw(8) << left << m_hair_length 
             << "Race: " << setw(12) << left << m_race
             << "IsEquipped: " << setw(10) << left << m_gunEquipped
             << endl;

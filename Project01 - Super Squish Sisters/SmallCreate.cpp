@@ -32,9 +32,7 @@ void SmallCreate::SetAttributes(string line, vector<Character*>* characters) con
 //    cout << "**********" << endl;
     
     bool bool_val = (gun_equipped == "TRUE") ? true : false; 
-    
-    
-    
+
     Small * s = new Small(name, std::stod(weight), speed, std::stod(hair_length), race, bool_val);
     characters->push_back(s);
     

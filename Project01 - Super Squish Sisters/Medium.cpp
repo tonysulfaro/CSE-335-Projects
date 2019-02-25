@@ -33,10 +33,10 @@ Medium::~Medium() {
 
 void Medium::print() const{
     cout << "Name: " << setw(15) << left << m_name  
-            << "Weight: " << setw(10) << left << m_weight 
             << "Size: " << setw(8) << left << m_size
+            << "Weight: " << setw(10) << left << m_weight 
             << "Speed: " << setw(5) << left <<  m_speed 
-            << "HairLen: " << setw(5) << left << m_hair_length 
+            << "HairLen: " << setw(8) << left << m_hair_length 
             << "Race: " << setw(12) << left << m_race
             << "Weapon: " << setw(10) << left << m_meleeWeapon
             << endl;
