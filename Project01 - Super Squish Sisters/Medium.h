@@ -26,7 +26,7 @@ public:
     //Medium(const Medium& orig);
     virtual ~Medium();
     
-    void print() const;
+    void print();
 private:
     string m_size = "med";
     string m_meleeWeapon;

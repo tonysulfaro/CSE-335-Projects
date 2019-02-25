@@ -22,14 +22,20 @@ using std::endl;
 using std::left;
 using std::setw;
 
-Small::Small(string name, double weight, string speed, int hair_length, string race, bool gun_equipped):Character(name,weight,speed,hair_length,race){
+Small::Small(string name, double weight, string speed, int hair_length, string race, bool gun_equipped){//:Character(name,weight,speed,hair_length,race){
     m_gunEquipped = gun_equipped;
+    
+    m_name = name;
+    m_weight = weight;
+    m_speed = speed;
+    m_hair_length = hair_length;
+    m_race = race;
 }
 
 Small::~Small() {
 }
 
-void Small::print() const{
+void Small::print(){
     cout << "Name: " << setw(15) << left << m_name  
             << "Weight: " << setw(10) << left << m_weight 
             << "Size: " << setw(8) << left << m_size

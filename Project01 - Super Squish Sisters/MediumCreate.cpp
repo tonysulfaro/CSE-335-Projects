@@ -35,9 +35,10 @@ void MediumCreate::SetAttributes(string line, vector<Character>* characters) con
 //    characters->push_back(m);
     
 //    Medium m(name, std::stod(weight), speed, std::stoi(hair_length), race, melee_weapon);
-//    characters->push_back(&m);
-    
-//    cout << characters->size() << endl;
+////    m.print();
+//    characters->push_back(m);
 
-//    characters->push_back(Medium(name, std::stod(weight), speed, std::stoi(hair_length), race, melee_weapon));
+    characters->push_back(Medium(name, std::stod(weight), speed, std::stoi(hair_length), race, melee_weapon));
+    
+    cout << characters->size() << endl;
 }

@@ -13,7 +13,7 @@
 
 #include "SmallCreate.h"
 
-SmallCreate::SmallCreate(string s, vector<Character*>* v) {
+SmallCreate::SmallCreate(string s, vector<Character>* v) {
     SmallCreate::SetAttributes(s, v);
 }
 

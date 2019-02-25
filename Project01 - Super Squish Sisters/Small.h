@@ -23,10 +23,9 @@ using std::string;
 class Small: public Character{
 public:
     Small(string name, double weight, string speed, int hair_length, string race, bool gun_equipped);
-
     virtual ~Small();
     
-    void print() const;
+    void print();
     void equipGun();
     void unEquipGun();
 private:

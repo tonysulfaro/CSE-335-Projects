@@ -21,8 +21,14 @@ using std::endl;
 using std::left;
 using std::setw;
 
-Medium::Medium(string name, double weight, string speed, int hair_length, string race, string melee_weapon):Character(name,weight,speed,hair_length,race) {
+Medium::Medium(string name, double weight, string speed, int hair_length, string race, string melee_weapon){//:Character(name,weight,speed,hair_length,race) {
     m_meleeWeapon = melee_weapon;
+    
+    m_name = name;
+    m_weight = weight;
+    m_speed = speed;
+    m_hair_length = hair_length;
+    m_race = race;
 }
 
 //Medium::Medium(const Medium& orig) {
@@ -31,7 +37,8 @@ Medium::Medium(string name, double weight, string speed, int hair_length, string
 Medium::~Medium() {
 }
 
-void Medium::print() const{
+void Medium::print(){
+    cout << "PRINT MEDIUM" << endl;
     cout << "Name: " << setw(15) << left << m_name  
             << "Weight: " << setw(10) << left << m_weight 
             << "Size: " << setw(8) << left << m_size

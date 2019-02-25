@@ -26,14 +26,15 @@ protected:
     int m_hair_length;
     string m_race;
 public:
-    Character(string name, double weight, string speed, int hair_length, string race);
-    //Character(const Character& orig);
+    Character();//string name, double weight, string speed, int hair_length, string race);
+    Character(const Character& orig);
     virtual ~Character();
     
-    virtual void print() const = 0;
-    int getHair(){return m_hair_length;}
-    string getSpeed(){return m_speed;}
-    string getRace(){return m_race;}
+    void print();
+//    int getHair(){return m_hair_length;}
+//    string getSpeed(){return m_speed;}
+//    string getRace(){return m_race;}
+    
 private:
 
 };
