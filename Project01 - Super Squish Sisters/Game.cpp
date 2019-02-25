@@ -66,7 +66,15 @@ void Game::getCharacters(){
     for(int i = 0; i < m_sisters.size(); ++i){
         m_sisters[i]->print();
     }
-    cout << "******************************************************************************************************************" << endl;
+    cout << "******************************************************************************************************************" << endl<<endl;
+    
+    //fix
+    if (count == 1){
+        for(int i = 0; i < m_sisters.size(); ++i){
+            delete m_sisters.at(i);
+        }
+    }
+    ++count;
 }
 
 // sort sisters
@@ -76,7 +84,7 @@ void Game::sort(){
 
 // get by race
 void Game::getCharactersByRace(){
-    cout << "******************** Printing Sisters: Order by Race *************************************************************" << endl;
+    cout << "******************** Printing Sisters: Order by Race *************************************************************" << endl<<endl;
     
     vector<Character*> byRace;
     vector<Character*> temp;
@@ -103,7 +111,7 @@ void Game::getCharactersByRace(){
     for(int i = 0; i < temp.size(); ++i){
         temp[i]->print();
     }
-    cout << "******************************************************************************************************************" << endl;
+    cout << "******************************************************************************************************************" << endl<<endl;
     //return byRace;
 }
 
@@ -122,7 +130,7 @@ void Game::getCharactersBySpeed(){
         int index = 0;
         for(int i = 1; i < temp.size(); ++i){
             Character *sister = temp[i];
-            if (sister->getSpeed() < min_sister->getSpeed()){
+            if ( std::stoi(sister->getSpeed()) < std::stoi(min_sister->getSpeed())){
                 min_sister = sister;
                 index = i;
             }
@@ -137,7 +145,7 @@ void Game::getCharactersBySpeed(){
         temp[i]->print();
     }
     
-    cout << "******************************************************************************************************************" << endl;
+    cout << "******************************************************************************************************************" << endl<< endl;
     //return bySpeed;
 }
 
@@ -169,8 +177,7 @@ void Game::getCharactersByHair(){
     for(int i = 0; i < temp.size(); ++i){
         temp[i]->print();
     }
-    cout << "******************************************************************************************************************" << endl;
-    //return byHair;
+    cout << "******************************************************************************************************************" << endl<<endl;
 }
 
 

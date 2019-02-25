@@ -32,6 +32,7 @@ class Game {
 private:
 protected:
     vector <Character*> m_sisters;
+    int count = 0;
 public:
     Game(string fileName);
     Game(const Game& orig);
