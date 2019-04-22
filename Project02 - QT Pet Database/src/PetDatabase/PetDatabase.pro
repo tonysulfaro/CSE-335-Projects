@@ -37,7 +37,7 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui \
-        shoppingcart.ui
+    cartwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -6,107 +6,93 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>663</width>
-    <height>548</height>
+    <width>419</width>
+    <height>374</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>10</y>
-      <width>621</width>
-      <height>191</height>
+      <width>411</width>
+      <height>281</height>
      </rect>
     </property>
-    <column>
-     <property name="text">
-      <string>New Column</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Product Name</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Type</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Special Attribute</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QTableWidget" name="tableWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>220</y>
-      <width>621</width>
-      <height>192</height>
-     </rect>
-    </property>
-    <column>
-     <property name="text">
-      <string>Bundle Name</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Price</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Savings</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QPushButton" name="btnLoadDatabase">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>430</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Load Database</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnAddCart">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>430</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string> Add to Cart</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnShowCart">
-    <property name="geometry">
-     <rect>
-      <x>509</x>
-      <y>430</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Show Cart</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QTableWidget" name="tableWidget">
+       <column>
+        <property name="text">
+         <string>Product Name</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Type</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Special Attribute</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="tableWidget_2">
+       <column>
+        <property name="text">
+         <string>Bundle Name</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>New Column</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Savings</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="Button_LoadData">
+         <property name="text">
+          <string>Load Database</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Button_AddToCart">
+         <property name="text">
+          <string>Add to Cart</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Button_ShowCart">
+         <property name="text">
+          <string>Show Cart</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -114,8 +100,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>663</width>
-     <height>17</height>
+     <width>419</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
