@@ -25,10 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        Bundle.cpp \
+        Item.cpp \
         main.cpp \
         mainwindow.cpp
 
 HEADERS += \
+        Bundle.h \
+        Item.h \
         mainwindow.h
 
 FORMS += \
