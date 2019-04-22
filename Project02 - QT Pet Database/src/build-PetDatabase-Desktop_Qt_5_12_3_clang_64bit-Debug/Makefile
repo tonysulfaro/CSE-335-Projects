@@ -52,13 +52,9 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../PetDatabase/Bundle.cpp \
-		../PetDatabase/Item.cpp \
-		../PetDatabase/main.cpp \
+SOURCES       = ../PetDatabase/main.cpp \
 		../PetDatabase/mainwindow.cpp moc_mainwindow.cpp
-OBJECTS       = Bundle.o \
-		Item.o \
-		main.o \
+OBJECTS       = main.o \
 		mainwindow.o \
 		moc_mainwindow.o
 DIST          = /Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/spec_pre.prf \
@@ -205,6 +201,7 @@ DIST          = /Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/spec_pre.
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/qt_config.prf \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/spec_post.prf \
+		../PetDatabase/.qmake.stash \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/toolchain.prf \
@@ -232,11 +229,7 @@ DIST          = /Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/spec_pre.
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/exceptions.prf \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/yacc.prf \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/lex.prf \
-		../PetDatabase/PetDatabase.pro ../PetDatabase/Bundle.h \
-		../PetDatabase/Item.h \
-		../PetDatabase/mainwindow.h ../PetDatabase/Bundle.cpp \
-		../PetDatabase/Item.cpp \
-		../PetDatabase/main.cpp \
+		../PetDatabase/PetDatabase.pro ../PetDatabase/mainwindow.h ../PetDatabase/main.cpp \
 		../PetDatabase/mainwindow.cpp
 QMAKE_TARGET  = PetDatabase
 DESTDIR       = 
@@ -404,6 +397,7 @@ Makefile: ../PetDatabase/PetDatabase.pro /Users/tonysulfaro/Qt/5.12.3/clang_64/m
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/qt_config.prf \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/toolchain.prf \
@@ -580,6 +574,7 @@ Makefile: ../PetDatabase/PetDatabase.pro /Users/tonysulfaro/Qt/5.12.3/clang_64/m
 /Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/qt_config.prf:
 /Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/macx-clang/qmake.conf:
 /Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/exclusive_builds.prf:
 /Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/mac/sdk.prf:
 /Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/toolchain.prf:
@@ -641,8 +636,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /Users/tonysulfaro/Qt/5.12.3/clang_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../PetDatabase/Bundle.h ../PetDatabase/Item.h ../PetDatabase/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../PetDatabase/Bundle.cpp ../PetDatabase/Item.cpp ../PetDatabase/main.cpp ../PetDatabase/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../PetDatabase/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../PetDatabase/main.cpp ../PetDatabase/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../PetDatabase/mainwindow.ui ../PetDatabase/cartwindow.ui $(DISTDIR)/
 
 
@@ -653,6 +648,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r PetDatabase.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -713,13 +709,6 @@ compiler_lex_clean:
 compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
-
-Bundle.o: ../PetDatabase/Bundle.cpp ../PetDatabase/Bundle.h \
-		../PetDatabase/Item.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Bundle.o ../PetDatabase/Bundle.cpp
-
-Item.o: ../PetDatabase/Item.cpp ../PetDatabase/Item.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Item.o ../PetDatabase/Item.cpp
 
 main.o: ../PetDatabase/main.cpp ../PetDatabase/mainwindow.h \
 		/Users/tonysulfaro/Qt/5.12.3/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
