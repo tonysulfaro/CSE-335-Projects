@@ -1,6 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "cartwindow.h"
+#include "ui_cartwindow.h"
+
+#include <QApplication>
+#include <QtGui>
+
 #include <cmath>
 
 #include <QDebug>
@@ -20,6 +26,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->Button_LoadData, SIGNAL (released()), this, SLOT (loadData()));
     connect(ui->Button_AddToCart, SIGNAL (released()), this, SLOT (addToCart()));
+	
+	if (cartWindowStorage == nullptr){
+        cartWindowStorage = new CartWindow(this);
+    }
 }
 
 MainWindow::~MainWindow()
@@ -159,4 +169,16 @@ void MainWindow::addToCart(){
     for(auto cell: a){
         qDebug() << cell->text();
     }
+}
+
+void MainWindow::on_Button_ShowCart_clicked()
+{
+	if (ui->Button_ShowCart->text() == "Show Cart"){
+		ui->Button_ShowCart->setText("Hide Cart");
+		cartWindowStorage->show();
+	}
+	else {
+		ui->Button_ShowCart->setText("Show Cart");
+		cartWindowStorage->close();
+	}
 }
