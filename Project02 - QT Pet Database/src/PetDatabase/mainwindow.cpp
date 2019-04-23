@@ -1,5 +1,12 @@
 #include "mainwindow.h"
+#include "cartwindow.h"
 #include "ui_mainwindow.h"
+#include "ui_cartwindow.h"
+
+#include <QApplication>
+#include <QtGui>
+#include <QMessageBox>
+
 
 #include <cmath>
 
@@ -14,18 +21,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+<<<<<<< HEAD
 
     ui->Button_ShowCart->setEnabled(false);
     ui->Button_AddToCart->setEnabled(false);
 
     connect(ui->Button_LoadData, SIGNAL (released()), this, SLOT (loadData()));
+=======
+    if (cartWindowStorage == nullptr){
+        cartWindowStorage = new CartWindow(this);
+    }
+>>>>>>> bakerso1_P2
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow(){
     delete ui;
 }
 
+<<<<<<< HEAD
 void MainWindow::loadData(){
     QFile file("../../../../Technology.csv");
     if(!file.open(QIODevice::ReadOnly)) {
@@ -148,4 +161,19 @@ void MainWindow::loadData(){
     ui->Button_ShowCart->setEnabled(true);
     ui->Button_AddToCart->setEnabled(true);
     ui->Button_LoadData->setEnabled(false);
+=======
+void MainWindow::on_Button_ShowCart_clicked()
+{
+
+
+        if (ui->Button_ShowCart->text() == "Show Cart"){
+            ui->Button_ShowCart->setText("Hide Cart");
+            cartWindowStorage->show();
+        }
+        else {
+            ui->Button_ShowCart->setText("Show Cart");
+            cartWindowStorage->close();
+        }
+
+>>>>>>> bakerso1_P2
 }
