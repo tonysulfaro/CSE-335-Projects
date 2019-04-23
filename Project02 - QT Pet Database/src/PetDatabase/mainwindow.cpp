@@ -46,7 +46,7 @@ void MainWindow::on_Button_ShowCart_clicked()
 }
 
 void MainWindow::loadData(){
-    QString backpath = "../../../../../";
+    QString backpath = "../";
     QFile file(backpath+"Technology.csv");
     if(!file.open(QIODevice::ReadOnly)) {
         QMessageBox::information(0, "error", file.errorString());

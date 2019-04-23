@@ -13,7 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -33,7 +33,7 @@ public:
     QTableWidget *tableWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *Button_Delete;
-    QLineEdit *lineSavings;
+    QLabel *label;
     QPushButton *Button_Checkout;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -69,10 +69,11 @@ public:
 
         horizontalLayout->addWidget(Button_Delete);
 
-        lineSavings = new QLineEdit(verticalLayoutWidget);
-        lineSavings->setObjectName(QString::fromUtf8("lineSavings"));
+        label = new QLabel(verticalLayoutWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout->addWidget(lineSavings);
+        horizontalLayout->addWidget(label);
 
         Button_Checkout = new QPushButton(verticalLayoutWidget);
         Button_Checkout->setObjectName(QString::fromUtf8("Button_Checkout"));
@@ -85,7 +86,7 @@ public:
         CartWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(CartWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 483, 21));
+        menubar->setGeometry(QRect(0, 0, 483, 22));
         CartWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(CartWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -104,6 +105,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
         ___qtablewidgetitem1->setText(QApplication::translate("CartWindow", "Price", nullptr));
         Button_Delete->setText(QApplication::translate("CartWindow", "Delete", nullptr));
+        label->setText(QString());
         Button_Checkout->setText(QApplication::translate("CartWindow", "Checkout", nullptr));
     } // retranslateUi
 
