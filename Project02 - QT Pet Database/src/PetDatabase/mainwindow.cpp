@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->Button_ShowCart->setEnabled(false);
     ui->Button_AddToCart->setEnabled(false);
+    ui->tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->tableWidget_2->setSelectionBehavior(QAbstractItemView::SelectRows);
 
     connect(ui->Button_LoadData, SIGNAL (released()), this, SLOT (loadData()));
     connect(ui->Button_AddToCart, SIGNAL (released()), this, SLOT (addToCart()));
@@ -165,6 +167,7 @@ void MainWindow::loadData(){
     ui->Button_ShowCart->setEnabled(true);
     ui->Button_AddToCart->setEnabled(true);
     ui->Button_LoadData->setEnabled(false);
+
 }
 
 void MainWindow::addToCart(){
@@ -172,28 +175,59 @@ void MainWindow::addToCart(){
 
     qDebug() << a;
 
-    QVector<QVector<QString>> rows;
+    if(a.size() == 0){
+        QList<QTableWidgetItem *> a =  ui->tableWidget_2->selectedItems();
+
+        qDebug() << a;
+        QVector<QVector<QString>> rows;
 
 
-    while(a.size()>1){
-    QVector<QString> row;
-    for(int i = 0; i<4; i++){
-        row.push_back(a[0]->text());
-        a.pop_front();
+        while(a.size()>1){
+        QVector<QString> row;
+        for(int i = 0; i<3; i++){
+            row.push_back(a[0]->text());
+            a.pop_front();
+        }
+        rows.push_back(row);
+        cartWindowStorage->getUi()->tableWidget->insertRow(cartWindowStorage->getUi()->tableWidget->rowCount());
+
+        QTableWidgetItem *ItemCell = new QTableWidgetItem;
+        cartWindowStorage->getUi()->tableWidget->setItem(cartWindowStorage->getUi()->tableWidget->rowCount()-1,0,ItemCell);
+        ItemCell->setText(row[0]);
+
+        QTableWidgetItem *PriceCell = new QTableWidgetItem;
+        cartWindowStorage->getUi()->tableWidget->setItem(cartWindowStorage->getUi()->tableWidget->rowCount()-1,1,PriceCell);
+        PriceCell->setText(row[1]);
+        }
+
+        qDebug() << rows;
     }
-    rows.push_back(row);
-    cartWindowStorage->getUi()->tableWidget->insertRow(cartWindowStorage->getUi()->tableWidget->rowCount());
+    else{
+        QList<QTableWidgetItem *> a =  ui->tableWidget->selectedItems();
 
-    QTableWidgetItem *ItemCell = new QTableWidgetItem;
-    cartWindowStorage->getUi()->tableWidget->setItem(cartWindowStorage->getUi()->tableWidget->rowCount()-1,0,ItemCell);
-    ItemCell->setText(row[0]);
+        qDebug() << a;
+        QVector<QVector<QString>> rows;
 
-    QTableWidgetItem *PriceCell = new QTableWidgetItem;
-    cartWindowStorage->getUi()->tableWidget->setItem(cartWindowStorage->getUi()->tableWidget->rowCount()-1,1,PriceCell);
-    PriceCell->setText(row[2]);
+
+        while(a.size()>1){
+        QVector<QString> row;
+        for(int i = 0; i<4; i++){
+            row.push_back(a[0]->text());
+            a.pop_front();
+        }
+        rows.push_back(row);
+        cartWindowStorage->getUi()->tableWidget->insertRow(cartWindowStorage->getUi()->tableWidget->rowCount());
+
+        QTableWidgetItem *ItemCell = new QTableWidgetItem;
+        cartWindowStorage->getUi()->tableWidget->setItem(cartWindowStorage->getUi()->tableWidget->rowCount()-1,0,ItemCell);
+        ItemCell->setText(row[0]);
+
+        QTableWidgetItem *PriceCell = new QTableWidgetItem;
+        cartWindowStorage->getUi()->tableWidget->setItem(cartWindowStorage->getUi()->tableWidget->rowCount()-1,1,PriceCell);
+        PriceCell->setText(row[2]);
+        }
+
+        qDebug() << rows;
     }
-
-    qDebug() << rows;
-
 }
 
