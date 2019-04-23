@@ -33,9 +33,9 @@ public:
     QTableWidget *tableWidget;
     QTableWidget *tableWidget_2;
     QHBoxLayout *horizontalLayout;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton;
+    QPushButton *Button_LoadData;
+    QPushButton *Button_AddToCart;
+    QPushButton *Button_ShowCart;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -86,20 +86,20 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        pushButton_2 = new QPushButton(verticalLayoutWidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        Button_LoadData = new QPushButton(verticalLayoutWidget);
+        Button_LoadData->setObjectName(QString::fromUtf8("Button_LoadData"));
 
-        horizontalLayout->addWidget(pushButton_2);
+        horizontalLayout->addWidget(Button_LoadData);
 
-        pushButton_3 = new QPushButton(verticalLayoutWidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        Button_AddToCart = new QPushButton(verticalLayoutWidget);
+        Button_AddToCart->setObjectName(QString::fromUtf8("Button_AddToCart"));
 
-        horizontalLayout->addWidget(pushButton_3);
+        horizontalLayout->addWidget(Button_AddToCart);
 
-        pushButton = new QPushButton(verticalLayoutWidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        Button_ShowCart = new QPushButton(verticalLayoutWidget);
+        Button_ShowCart->setObjectName(QString::fromUtf8("Button_ShowCart"));
 
-        horizontalLayout->addWidget(pushButton);
+        horizontalLayout->addWidget(Button_ShowCart);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -138,9 +138,9 @@ public:
         ___qtablewidgetitem5->setText(QApplication::translate("MainWindow", "New Column", nullptr));
         QTableWidgetItem *___qtablewidgetitem6 = tableWidget_2->horizontalHeaderItem(2);
         ___qtablewidgetitem6->setText(QApplication::translate("MainWindow", "Savings", nullptr));
-        pushButton_2->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_3->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        Button_LoadData->setText(QApplication::translate("MainWindow", "Load Database", nullptr));
+        Button_AddToCart->setText(QApplication::translate("MainWindow", "Add to Cart", nullptr));
+        Button_ShowCart->setText(QApplication::translate("MainWindow", "Show Cart", nullptr));
     } // retranslateUi
 
 };

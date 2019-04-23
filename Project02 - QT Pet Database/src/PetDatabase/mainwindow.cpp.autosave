@@ -24,7 +24,7 @@ void MainWindow::on_Button_ShowCart_clicked()
 //        ui->CartWindow->close();
         this->close();
 
-
+        
 
     }
     else {
