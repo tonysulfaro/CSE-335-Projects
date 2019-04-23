@@ -172,8 +172,28 @@ void MainWindow::addToCart(){
 
     qDebug() << a;
 
-    for(auto cell: a){
-        qDebug() << cell->text();
+    QVector<QVector<QString>> rows;
+
+
+    while(a.size()>1){
+    QVector<QString> row;
+    for(int i = 0; i<4; i++){
+        row.push_back(a[0]->text());
+        a.pop_front();
     }
+    rows.push_back(row);
+    cartWindowStorage->getUi()->tableWidget->insertRow(cartWindowStorage->getUi()->tableWidget->rowCount());
+
+    QTableWidgetItem *ItemCell = new QTableWidgetItem;
+    cartWindowStorage->getUi()->tableWidget->setItem(cartWindowStorage->getUi()->tableWidget->rowCount()-1,0,ItemCell);
+    ItemCell->setText(row[0]);
+
+    QTableWidgetItem *PriceCell = new QTableWidgetItem;
+    cartWindowStorage->getUi()->tableWidget->setItem(cartWindowStorage->getUi()->tableWidget->rowCount()-1,1,PriceCell);
+    PriceCell->setText(row[2]);
+    }
+
+    qDebug() << rows;
+
 }
 
