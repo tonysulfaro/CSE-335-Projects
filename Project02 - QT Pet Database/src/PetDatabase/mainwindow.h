@@ -18,6 +18,8 @@ public:
 
 private slots:
     void on_Button_ShowCart_clicked();
+    void loadData();
+    void addToCart();
 
 private:
     Ui::MainWindow *ui;
