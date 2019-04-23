@@ -28,8 +28,10 @@ void CartWindow::on_Button_Checkout_clicked()
             grand_total+= item->text().toDouble();
         }
 
-    uiCart->label->setText("TOTAL: " + QString::number(grand_total));
-
+    QString total_text = "<font color='red'>";
+            total_text +="TOTAL: " + QString::number(grand_total);
+            total_text +="</font>";
+    uiCart->label->setText(total_text);
 }
 
 void CartWindow::on_Button_Delete_clicked()
