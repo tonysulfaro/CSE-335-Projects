@@ -46,7 +46,8 @@ void MainWindow::on_Button_ShowCart_clicked()
 }
 
 void MainWindow::loadData(){
-    QFile file("../../../../../Technology.csv");
+    QString backpath = "../../../../../";
+    QFile file(backpath+"Technology.csv");
     if(!file.open(QIODevice::ReadOnly)) {
         QMessageBox::information(0, "error", file.errorString());
         qDebug() << QDir::currentPath();
@@ -87,7 +88,7 @@ void MainWindow::loadData(){
     file.close();
 
 
-    QFile file2("../../../../../Bundles.csv");
+    QFile file2(backpath+"Bundles.csv");
     if(!file2.open(QIODevice::ReadOnly)) {
         QMessageBox::information(0, "error", file2.errorString());
         qDebug() << QDir::currentPath();
@@ -119,7 +120,7 @@ void MainWindow::loadData(){
 
         QVector <QStringList> products;
         // products
-        QFile file("../../../../../Technology.csv");
+        QFile file(backpath+"Technology.csv");
         if(!file.open(QIODevice::ReadOnly)) {
             QMessageBox::information(0, "error", file.errorString());
             qDebug() << QDir::currentPath();
