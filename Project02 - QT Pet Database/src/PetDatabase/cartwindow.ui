@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CartWindow</class>
- <widget class="QMainWindow" name="CartWindow">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>483</width>
-    <height>389</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>451</width>
-      <height>331</height>
+      <x>60</x>
+      <y>70</y>
+      <width>401</width>
+      <height>261</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -41,7 +41,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QPushButton" name="Button_Delete">
+        <widget class="QPushButton" name="deleteButton">
          <property name="text">
           <string>Delete</string>
          </property>
@@ -51,7 +51,7 @@
         <widget class="QLineEdit" name="lineSavings"/>
        </item>
        <item>
-        <widget class="QPushButton" name="Button_Checkout">
+        <widget class="QPushButton" name="checkoutButton">
          <property name="text">
           <string>Checkout</string>
          </property>
@@ -67,7 +67,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>483</width>
+     <width>800</width>
      <height>21</height>
     </rect>
    </property>

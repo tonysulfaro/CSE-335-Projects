@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'cartwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.0
+** Created by: Qt User Interface Compiler version 5.12.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -24,7 +24,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_CartWindow
+class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
@@ -38,16 +38,16 @@ public:
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
-    void setupUi(QMainWindow *CartWindow)
+    void setupUi(QMainWindow *MainWindow)
     {
-        if (CartWindow->objectName().isEmpty())
-            CartWindow->setObjectName(QString::fromUtf8("CartWindow"));
-        CartWindow->resize(483, 389);
-        centralwidget = new QWidget(CartWindow);
+        if (MainWindow->objectName().isEmpty())
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+        MainWindow->resize(800, 600);
+        centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(20, 20, 451, 331));
+        verticalLayoutWidget->setGeometry(QRect(60, 70, 401, 261));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -64,53 +64,53 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        Button_Delete = new QPushButton(verticalLayoutWidget);
-        Button_Delete->setObjectName(QString::fromUtf8("Button_Delete"));
+        deleteButton = new QPushButton(verticalLayoutWidget);
+        deleteButton->setObjectName(QString::fromUtf8("deleteButton"));
 
-        horizontalLayout->addWidget(Button_Delete);
+        horizontalLayout->addWidget(deleteButton);
 
         lineSavings = new QLineEdit(verticalLayoutWidget);
         lineSavings->setObjectName(QString::fromUtf8("lineSavings"));
 
         horizontalLayout->addWidget(lineSavings);
 
-        Button_Checkout = new QPushButton(verticalLayoutWidget);
-        Button_Checkout->setObjectName(QString::fromUtf8("Button_Checkout"));
+        checkoutButton = new QPushButton(verticalLayoutWidget);
+        checkoutButton->setObjectName(QString::fromUtf8("checkoutButton"));
 
-        horizontalLayout->addWidget(Button_Checkout);
+        horizontalLayout->addWidget(checkoutButton);
 
 
         verticalLayout->addLayout(horizontalLayout);
 
-        CartWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(CartWindow);
+        MainWindow->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 483, 21));
-        CartWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(CartWindow);
+        menubar->setGeometry(QRect(0, 0, 800, 21));
+        MainWindow->setMenuBar(menubar);
+        statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        CartWindow->setStatusBar(statusbar);
+        MainWindow->setStatusBar(statusbar);
 
-        retranslateUi(CartWindow);
+        retranslateUi(MainWindow);
 
-        QMetaObject::connectSlotsByName(CartWindow);
+        QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
 
-    void retranslateUi(QMainWindow *CartWindow)
+    void retranslateUi(QMainWindow *MainWindow)
     {
-        CartWindow->setWindowTitle(QApplication::translate("CartWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("CartWindow", "Item", nullptr));
+        ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "Item", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QApplication::translate("CartWindow", "Price", nullptr));
-        Button_Delete->setText(QApplication::translate("CartWindow", "Delete", nullptr));
-        Button_Checkout->setText(QApplication::translate("CartWindow", "Checkout", nullptr));
+        ___qtablewidgetitem1->setText(QApplication::translate("MainWindow", "Price", nullptr));
+        deleteButton->setText(QApplication::translate("MainWindow", "Delete", nullptr));
+        checkoutButton->setText(QApplication::translate("MainWindow", "Checkout", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class CartWindow: public Ui_CartWindow {};
+    class MainWindow: public Ui_MainWindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE
