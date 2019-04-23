@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "ui_cartwindow.h"
+#include "cartwindow.h"
 
 namespace Ui {
 class MainWindow;
@@ -21,6 +21,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    CartWindow* cartWindowStorage = nullptr;
 };
 
 #endif // MAINWINDOW_H

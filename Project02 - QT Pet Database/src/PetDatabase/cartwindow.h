@@ -1,9 +1,7 @@
 #ifndef CARTWINDOW_H
 #define CARTWINDOW_H
-
 #include <QMainWindow>
 #include <QDialog>
-
 
 namespace Ui {
 class CartWindow;

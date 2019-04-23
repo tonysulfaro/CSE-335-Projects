@@ -42,7 +42,7 @@ public:
     {
         if (CartWindow->objectName().isEmpty())
             CartWindow->setObjectName(QString::fromUtf8("CartWindow"));
-        CartWindow->resize(800, 600);
+        CartWindow->resize(483, 389);
         centralwidget = new QWidget(CartWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayoutWidget = new QWidget(centralwidget);
@@ -52,6 +52,12 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         tableWidget = new QTableWidget(verticalLayoutWidget);
+        if (tableWidget->columnCount() < 2)
+            tableWidget->setColumnCount(2);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
 
         verticalLayout->addWidget(tableWidget);
@@ -78,7 +84,7 @@ public:
         CartWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(CartWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 483, 21));
         CartWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(CartWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -92,6 +98,10 @@ public:
     void retranslateUi(QMainWindow *CartWindow)
     {
         CartWindow->setWindowTitle(QApplication::translate("CartWindow", "MainWindow", nullptr));
+        QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QApplication::translate("CartWindow", "Item", nullptr));
+        QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QApplication::translate("CartWindow", "Price", nullptr));
         Button_Delete->setText(QApplication::translate("CartWindow", "Delete", nullptr));
         Button_Checkout->setText(QApplication::translate("CartWindow", "Checkout", nullptr));
     } // retranslateUi

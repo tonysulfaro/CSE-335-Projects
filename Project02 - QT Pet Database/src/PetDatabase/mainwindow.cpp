@@ -13,7 +13,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+    if (cartWindowStorage == nullptr){
+        cartWindowStorage = new CartWindow(this);
+    }
 }
 
 MainWindow::~MainWindow(){
@@ -22,13 +24,15 @@ MainWindow::~MainWindow(){
 
 void MainWindow::on_Button_ShowCart_clicked()
 {
-    if (ui->Button_ShowCart->text() == "Show Cart"){
-        ui->Button_ShowCart->setText("Hide Cart");
 
 
-    }
-    else {
-        ui->Button_ShowCart->setText("Show Cart");
+        if (ui->Button_ShowCart->text() == "Show Cart"){
+            ui->Button_ShowCart->setText("Hide Cart");
+            cartWindowStorage->show();
+        }
+        else {
+            ui->Button_ShowCart->setText("Show Cart");
+            cartWindowStorage->close();
+        }
 
-    }
 }
