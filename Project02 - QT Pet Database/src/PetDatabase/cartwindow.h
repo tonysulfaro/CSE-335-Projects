@@ -20,6 +20,8 @@ public:
 private slots:
     void on_Button_Checkout_clicked();
 
+    void on_Button_Delete_clicked();
+
 private:
     Ui::CartWindow *uiCart;
 };

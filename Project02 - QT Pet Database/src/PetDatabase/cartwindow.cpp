@@ -22,3 +22,12 @@ void CartWindow::on_Button_Checkout_clicked()
     //Cart Calculations
 
 }
+
+void CartWindow::on_Button_Delete_clicked()
+{
+    auto i = uiCart->tableWidget->selectionModel()->selectedRows();
+
+    for(auto a: i){
+        uiCart->tableWidget->removeRow(a.row());
+    }
+}
