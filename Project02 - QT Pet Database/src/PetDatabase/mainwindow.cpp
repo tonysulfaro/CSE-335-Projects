@@ -1,12 +1,5 @@
 #include "mainwindow.h"
-#include "cartwindow.h"
 #include "ui_mainwindow.h"
-#include "ui_cartwindow.h"
-
-#include <QApplication>
-#include <QtGui>
-#include <QMessageBox>
-
 
 #include <cmath>
 
@@ -21,20 +14,21 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
     ui->Button_ShowCart->setEnabled(false);
     ui->Button_AddToCart->setEnabled(false);
 
     connect(ui->Button_LoadData, SIGNAL (released()), this, SLOT (loadData()));
 =======
-    if (cartWindowStorage == nullptr){
-        cartWindowStorage = new CartWindow(this);
-    }
->>>>>>> bakerso1_P2
+>>>>>>> parent of bf1c96e... ShowHideDone
+=======
+>>>>>>> parent of bf1c96e... ShowHideDone
 }
 
-MainWindow::~MainWindow(){
+MainWindow::~MainWindow()
+{
     delete ui;
 }
 
@@ -53,6 +47,13 @@ void MainWindow::loadData(){
         QStringList fields = line.split(",");
         //qDebug() << line;
         //qDebug() << fields;
+=======
+void MainWindow::on_Button_ShowCart_clicked()
+{
+    if (ui->Button_ShowCart->text() == "Show Cart"){
+        ui->Button_ShowCart->setText("Hide Cart");
+<<<<<<< HEAD
+>>>>>>> parent of bf1c96e... ShowHideDone
 
         // add stuff to product table
         ui->tableWidget->insertRow(ui->tableWidget->rowCount());
@@ -87,7 +88,10 @@ void MainWindow::loadData(){
         qDebug() << QDir::currentPath();
     }
 
+<<<<<<< HEAD
     QTextStream in2(&file2);
+=======
+>>>>>>> parent of bf1c96e... ShowHideDone
 
     while(!in2.atEnd()) {
         QString line = in2.readLine();
@@ -95,6 +99,7 @@ void MainWindow::loadData(){
         qDebug() << line;
         qDebug() << group_fields;
 
+<<<<<<< HEAD
         // add stuff to product table
         ui->tableWidget_2->insertRow(ui->tableWidget_2->rowCount());
 
@@ -162,18 +167,17 @@ void MainWindow::loadData(){
     ui->Button_AddToCart->setEnabled(true);
     ui->Button_LoadData->setEnabled(false);
 =======
-void MainWindow::on_Button_ShowCart_clicked()
-{
+    }
+    else {
+        ui->Button_ShowCart->setText("Show Cart");
 
+    }
+>>>>>>> parent of bf1c96e... ShowHideDone
+=======
+    }
+    else {
+        ui->Button_ShowCart->setText("Show Cart");
 
-        if (ui->Button_ShowCart->text() == "Show Cart"){
-            ui->Button_ShowCart->setText("Hide Cart");
-            cartWindowStorage->show();
-        }
-        else {
-            ui->Button_ShowCart->setText("Show Cart");
-            cartWindowStorage->close();
-        }
-
->>>>>>> bakerso1_P2
+    }
+>>>>>>> parent of bf1c96e... ShowHideDone
 }
