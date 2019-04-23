@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <cmath>
+
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -81,14 +83,11 @@ MainWindow::MainWindow(QWidget *parent) :
         BundlePriceCell->setText(group_fields[1]);
 
         // calculate savings
-        double total_savings = 0.0;
+        double total_price = 0.0; //price of individual items (more than group)
+        double group_price = group_fields[1].toDouble(); //price of group (less than regular)
 
-        // loop to get products in bundle
-        for(int i = 2; i < group_fields.size(); i++){
-            QString group_product = group_fields[i];
-            qDebug() << group_product;
-        }
 
+        QVector <QStringList> products;
         // products
         QFile file("../../../../Technology.csv");
         if(!file.open(QIODevice::ReadOnly)) {
@@ -100,11 +99,32 @@ MainWindow::MainWindow(QWidget *parent) :
             QString line = in.readLine();
             QStringList product_fields = line.split(",");
             qDebug() << product_fields;
+            products.push_back(product_fields);
         }
+
+        qDebug() << "TEST" <<products;
+
+        // loop to get products in bundle
+        for(int i = 2; i < group_fields.size(); i++){
+            QString group_product = group_fields[i];
+            qDebug() << group_product;
+
+            for(auto a: products){
+                //qDebug() << a;
+
+                if(group_product == a[1]){
+                    qDebug() << a[4].toDouble();
+                    total_price += a[4].toDouble();
+                }
+            }
+        }
+
+        double total_savings = round((1-(group_price/total_price))*100); //savings of group price
 
         QTableWidgetItem *ProductSpecialAttribute = new QTableWidgetItem;
         ui->tableWidget_2->setItem(ui->tableWidget_2->rowCount()-1,2,ProductSpecialAttribute);
-        ProductSpecialAttribute->setText(QString::number(total_savings)+"%");
+        ProductSpecialAttribute->setText(QString::number(qIntCast(total_savings))+"%");
+
 
         ui->tableWidget_2->resizeColumnsToContents();
         //ui->tableWidget->resizeRowsToContents();
