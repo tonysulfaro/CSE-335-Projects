@@ -15,7 +15,18 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ui->Button_ShowCart->setEnabled(false);
+    ui->Button_AddToCart->setEnabled(false);
 
+    connect(ui->Button_LoadData, SIGNAL (released()), this, SLOT (loadData()));
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::loadData(){
     QFile file("../../../../Technology.csv");
     if(!file.open(QIODevice::ReadOnly)) {
         QMessageBox::information(0, "error", file.errorString());
@@ -133,9 +144,8 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     file2.close();
-}
 
-MainWindow::~MainWindow()
-{
-    delete ui;
+    ui->Button_ShowCart->setEnabled(true);
+    ui->Button_AddToCart->setEnabled(true);
+    ui->Button_LoadData->setEnabled(false);
 }
