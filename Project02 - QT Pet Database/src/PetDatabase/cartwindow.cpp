@@ -23,20 +23,12 @@ void CartWindow::on_Button_Checkout_clicked()
     //Cart Calculations
     double grand_total = 0.0;
 
-    QList<QTableWidgetItem *> a =  uiCart->tableWidget->selectedItems();
-    QVector<QVector<QString>> rows;
-
-
-    while(a.size()>1){
-    QVector<QString> row;
-        for(int i = 0; i<2; i++){
-            row.push_back(a[1]->text());
-            //grand_total+= a[1]->text().toDouble();
-            a.pop_front();
+    for (int i=0;i< uiCart->tableWidget->rowCount();i++) {
+            QTableWidgetItem *item =  uiCart->tableWidget->item(i,1);
+            grand_total+= item->text().toDouble();
         }
-    }
 
-    uiCart->label->setText("TOTAL:");
+    uiCart->label->setText("TOTAL: " + QString::number(grand_total));
 
 }
 

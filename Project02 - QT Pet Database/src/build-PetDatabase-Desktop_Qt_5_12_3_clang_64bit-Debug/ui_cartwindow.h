@@ -71,6 +71,7 @@ public:
 
         label = new QLabel(verticalLayoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(label);
 
@@ -104,7 +105,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
         ___qtablewidgetitem1->setText(QApplication::translate("CartWindow", "Price", nullptr));
         Button_Delete->setText(QApplication::translate("CartWindow", "Delete", nullptr));
-        label->setText(QApplication::translate("CartWindow", "test", nullptr));
+        label->setText(QString());
         Button_Checkout->setText(QApplication::translate("CartWindow", "Checkout", nullptr));
     } // retranslateUi
 
