@@ -14,4 +14,11 @@ CartWindow::~CartWindow()
     delete uiCart;
 }
 
+void CartWindow::on_Button_Checkout_clicked()
+{
+    uiCart->Button_Checkout->setDisabled(true);
+    uiCart->Button_Delete->setDisabled(true);
 
+    //Cart Calculations
+
+}

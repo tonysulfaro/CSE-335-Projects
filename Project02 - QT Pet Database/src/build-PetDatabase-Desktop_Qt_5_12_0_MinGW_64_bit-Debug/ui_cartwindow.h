@@ -13,10 +13,10 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -33,7 +33,7 @@ public:
     QTableWidget *tableWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *Button_Delete;
-    QSpacerItem *horizontalSpacer;
+    QLineEdit *lineSavings;
     QPushButton *Button_Checkout;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -69,9 +69,10 @@ public:
 
         horizontalLayout->addWidget(Button_Delete);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        lineSavings = new QLineEdit(verticalLayoutWidget);
+        lineSavings->setObjectName(QString::fromUtf8("lineSavings"));
 
-        horizontalLayout->addItem(horizontalSpacer);
+        horizontalLayout->addWidget(lineSavings);
 
         Button_Checkout = new QPushButton(verticalLayoutWidget);
         Button_Checkout->setObjectName(QString::fromUtf8("Button_Checkout"));

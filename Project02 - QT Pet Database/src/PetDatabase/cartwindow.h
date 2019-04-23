@@ -17,6 +17,9 @@ public:
 
     Ui::CartWindow* getUi() const {return uiCart;}
 
+private slots:
+    void on_Button_Checkout_clicked();
+
 private:
     Ui::CartWindow *uiCart;
 };
