@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#include "ui_cartwindow.h"
+>>>>>>> parent of bf1c96e... ShowHideDone
 =======
 #include "ui_cartwindow.h"
 >>>>>>> parent of bf1c96e... ShowHideDone

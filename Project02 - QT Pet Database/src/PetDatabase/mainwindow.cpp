@@ -16,10 +16,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     ui->Button_ShowCart->setEnabled(false);
     ui->Button_AddToCart->setEnabled(false);
 
     connect(ui->Button_LoadData, SIGNAL (released()), this, SLOT (loadData()));
+=======
+>>>>>>> parent of bf1c96e... ShowHideDone
 =======
 >>>>>>> parent of bf1c96e... ShowHideDone
 }
@@ -49,6 +52,7 @@ void MainWindow::on_Button_ShowCart_clicked()
 {
     if (ui->Button_ShowCart->text() == "Show Cart"){
         ui->Button_ShowCart->setText("Hide Cart");
+<<<<<<< HEAD
 >>>>>>> parent of bf1c96e... ShowHideDone
 
         // add stuff to product table
@@ -86,6 +90,8 @@ void MainWindow::on_Button_ShowCart_clicked()
 
 <<<<<<< HEAD
     QTextStream in2(&file2);
+=======
+>>>>>>> parent of bf1c96e... ShowHideDone
 
     while(!in2.atEnd()) {
         QString line = in2.readLine();
@@ -93,6 +99,7 @@ void MainWindow::on_Button_ShowCart_clicked()
         qDebug() << line;
         qDebug() << group_fields;
 
+<<<<<<< HEAD
         // add stuff to product table
         ui->tableWidget_2->insertRow(ui->tableWidget_2->rowCount());
 
@@ -159,6 +166,13 @@ void MainWindow::on_Button_ShowCart_clicked()
     ui->Button_ShowCart->setEnabled(true);
     ui->Button_AddToCart->setEnabled(true);
     ui->Button_LoadData->setEnabled(false);
+=======
+    }
+    else {
+        ui->Button_ShowCart->setText("Show Cart");
+
+    }
+>>>>>>> parent of bf1c96e... ShowHideDone
 =======
     }
     else {

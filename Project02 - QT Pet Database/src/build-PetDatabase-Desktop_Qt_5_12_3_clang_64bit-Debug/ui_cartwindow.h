@@ -87,9 +87,12 @@ public:
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 800, 21));
 <<<<<<< HEAD:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_3_clang_64bit-Debug/ui_cartwindow.h
+<<<<<<< HEAD:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_3_clang_64bit-Debug/ui_cartwindow.h
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
 =======
+=======
+>>>>>>> parent of bf1c96e... ShowHideDone:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/ui_cartwindow.h
         CartWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(CartWindow);
 >>>>>>> parent of bf1c96e... ShowHideDone:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/ui_cartwindow.h
@@ -104,6 +107,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
 <<<<<<< HEAD:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_3_clang_64bit-Debug/ui_cartwindow.h
+<<<<<<< HEAD:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_3_clang_64bit-Debug/ui_cartwindow.h
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "Item", nullptr));
@@ -112,6 +116,8 @@ public:
         deleteButton->setText(QApplication::translate("MainWindow", "Delete", nullptr));
         checkoutButton->setText(QApplication::translate("MainWindow", "Checkout", nullptr));
 =======
+=======
+>>>>>>> parent of bf1c96e... ShowHideDone:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/ui_cartwindow.h
         CartWindow->setWindowTitle(QApplication::translate("CartWindow", "MainWindow", nullptr));
         Button_Delete->setText(QApplication::translate("CartWindow", "Delete", nullptr));
         Button_Checkout->setText(QApplication::translate("CartWindow", "Checkout", nullptr));
