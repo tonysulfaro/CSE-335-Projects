@@ -2,6 +2,7 @@
 #define CARTWINDOW_H
 
 #include <QMainWindow>
+#include <QDialog>
 
 
 namespace Ui {
@@ -15,10 +16,11 @@ class CartWindow : public QMainWindow
 public:
     explicit CartWindow(QWidget *parent = nullptr);
     ~CartWindow();
-    QString showHideCart(QString str);
+
+    Ui::CartWindow* getUi() const {return uiCart;}
 
 private:
-    Ui::CartWindow *ui;
+    Ui::CartWindow *uiCart;
 };
 
 #endif // CARTWINDOW_H

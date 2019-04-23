@@ -3,19 +3,15 @@
 
 CartWindow::CartWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::CartWindow)
+    uiCart(new Ui::CartWindow)
 {
-    ui->setupUi(this);
-    
+    uiCart->setupUi(this);
+
 }
 
 CartWindow::~CartWindow()
 {
-    delete ui;
+    delete uiCart;
 }
 
-QString showHideCart(QString str){
-    if (str == "Hide Cart"){
-//        this->close();
-    }
-}
+

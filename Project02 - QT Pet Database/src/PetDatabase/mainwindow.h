@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "ui_cartwindow.h"
 
 namespace Ui {
 class MainWindow;
