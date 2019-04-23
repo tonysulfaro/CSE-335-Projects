@@ -40,10 +40,17 @@ public:
 
     void setupUi(QMainWindow *MainWindow)
     {
+<<<<<<< HEAD:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_3_clang_64bit-Debug/ui_cartwindow.h
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
+=======
+        if (CartWindow->objectName().isEmpty())
+            CartWindow->setObjectName(QString::fromUtf8("CartWindow"));
+        CartWindow->resize(800, 600);
+        centralwidget = new QWidget(CartWindow);
+>>>>>>> parent of bf1c96e... ShowHideDone:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/ui_cartwindow.h
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
@@ -52,12 +59,6 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         tableWidget = new QTableWidget(verticalLayoutWidget);
-        if (tableWidget->columnCount() < 2)
-            tableWidget->setColumnCount(2);
-        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
-        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
 
         verticalLayout->addWidget(tableWidget);
@@ -85,8 +86,13 @@ public:
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 800, 21));
+<<<<<<< HEAD:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_3_clang_64bit-Debug/ui_cartwindow.h
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
+=======
+        CartWindow->setMenuBar(menubar);
+        statusbar = new QStatusBar(CartWindow);
+>>>>>>> parent of bf1c96e... ShowHideDone:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/ui_cartwindow.h
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
@@ -97,6 +103,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
+<<<<<<< HEAD:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_3_clang_64bit-Debug/ui_cartwindow.h
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "Item", nullptr));
@@ -104,6 +111,11 @@ public:
         ___qtablewidgetitem1->setText(QApplication::translate("MainWindow", "Price", nullptr));
         deleteButton->setText(QApplication::translate("MainWindow", "Delete", nullptr));
         checkoutButton->setText(QApplication::translate("MainWindow", "Checkout", nullptr));
+=======
+        CartWindow->setWindowTitle(QApplication::translate("CartWindow", "MainWindow", nullptr));
+        Button_Delete->setText(QApplication::translate("CartWindow", "Delete", nullptr));
+        Button_Checkout->setText(QApplication::translate("CartWindow", "Checkout", nullptr));
+>>>>>>> parent of bf1c96e... ShowHideDone:Project02 - QT Pet Database/src/build-PetDatabase-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/ui_cartwindow.h
     } // retranslateUi
 
 };

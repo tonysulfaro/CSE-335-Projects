@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+<<<<<<< HEAD
+=======
+#include "ui_cartwindow.h"
+>>>>>>> parent of bf1c96e... ShowHideDone
 
 namespace Ui {
 class MainWindow;

@@ -15,10 +15,13 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+<<<<<<< HEAD
     ui->Button_ShowCart->setEnabled(false);
     ui->Button_AddToCart->setEnabled(false);
 
     connect(ui->Button_LoadData, SIGNAL (released()), this, SLOT (loadData()));
+=======
+>>>>>>> parent of bf1c96e... ShowHideDone
 }
 
 MainWindow::~MainWindow()
@@ -26,6 +29,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+<<<<<<< HEAD
 void MainWindow::loadData(){
     QFile file("../../../../Technology.csv");
     if(!file.open(QIODevice::ReadOnly)) {
@@ -40,6 +44,12 @@ void MainWindow::loadData(){
         QStringList fields = line.split(",");
         //qDebug() << line;
         //qDebug() << fields;
+=======
+void MainWindow::on_Button_ShowCart_clicked()
+{
+    if (ui->Button_ShowCart->text() == "Show Cart"){
+        ui->Button_ShowCart->setText("Hide Cart");
+>>>>>>> parent of bf1c96e... ShowHideDone
 
         // add stuff to product table
         ui->tableWidget->insertRow(ui->tableWidget->rowCount());
@@ -74,6 +84,7 @@ void MainWindow::loadData(){
         qDebug() << QDir::currentPath();
     }
 
+<<<<<<< HEAD
     QTextStream in2(&file2);
 
     while(!in2.atEnd()) {
@@ -148,4 +159,11 @@ void MainWindow::loadData(){
     ui->Button_ShowCart->setEnabled(true);
     ui->Button_AddToCart->setEnabled(true);
     ui->Button_LoadData->setEnabled(false);
+=======
+    }
+    else {
+        ui->Button_ShowCart->setText("Show Cart");
+
+    }
+>>>>>>> parent of bf1c96e... ShowHideDone
 }
