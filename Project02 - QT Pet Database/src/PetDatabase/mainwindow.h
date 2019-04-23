@@ -17,6 +17,7 @@ public:
 
 private slots:
     void loadData();
+    void addToCart();
 
 private:
     Ui::MainWindow *ui;

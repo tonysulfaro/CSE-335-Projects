@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->Button_AddToCart->setEnabled(false);
 
     connect(ui->Button_LoadData, SIGNAL (released()), this, SLOT (loadData()));
+    connect(ui->Button_AddToCart, SIGNAL (released()), this, SLOT (addToCart()));
 }
 
 MainWindow::~MainWindow()
@@ -148,4 +149,14 @@ void MainWindow::loadData(){
     ui->Button_ShowCart->setEnabled(true);
     ui->Button_AddToCart->setEnabled(true);
     ui->Button_LoadData->setEnabled(false);
+}
+
+void MainWindow::addToCart(){
+    QList<QTableWidgetItem *> a =  ui->tableWidget->selectedItems();
+
+    qDebug() << a;
+
+    for(auto cell: a){
+        qDebug() << cell->text();
+    }
 }
